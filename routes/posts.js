@@ -6,12 +6,12 @@ const router = Router()
 
 // ========= Public Routes ========= 
 router.get('/', postCtrl.index)
-//router.get('/:id', postCtrl.show)
 
 
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, postCtrl.create)
+router.get('/:id', postCtrl.show)
 // router.put('/:id', checkAuth, postCtrl.update)
 // router.delete('/:id', checkAuth, postCtrl.delete)
 // Comments

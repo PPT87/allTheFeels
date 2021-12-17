@@ -29,15 +29,20 @@ const create = async (req, res) => {
   }
 }
 
-
-
-
-
-
+const show = async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id)
+      .populate('added_by')
+      .populate('comments.commenter')
+    return res.status(200).json(post)
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
 
 
 export{
   index,
   create,
-
+  show,
 }
