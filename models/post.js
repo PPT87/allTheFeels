@@ -15,13 +15,12 @@ const commentSchema = new Schema(
 
 const tagSchema = new Schema(
   {
-    tagText: {
+    tagName: {
       type: String,
       required: false
     },
   },
 )
-
 
 const postSchema = new Schema({
   title: {
