@@ -6,7 +6,7 @@ const commentSchema = new Schema(
   {
     comment_text: {
       type: String,
-      required: true
+      required: false
     },
     commenter: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' }
   },
@@ -30,7 +30,7 @@ const postSchema = new Schema({
   },
   image: {
     type: String,
-    required: true
+    required: false
   },
   body: {
     type: String, 
