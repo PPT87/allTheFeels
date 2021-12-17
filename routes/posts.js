@@ -16,8 +16,7 @@ router.put('/:id', checkAuth, postCtrl.update)
 router.delete('/:id', checkAuth, postCtrl.delete)
 // Comments
 router.post('/:id/comments', checkAuth, postCtrl.createComment)
-// router.put('/:postId/comments/:commentId', checkAuth, postCtrl.markCommentAsSolution)
-// router.delete('/:postId/comments/:commentId', checkAuth, postCtrl.deleteComment)
+router.delete('/:postId/comments/:commentId', checkAuth, postCtrl.deleteComment)
 
 export {
     router
