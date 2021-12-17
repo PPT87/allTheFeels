@@ -10,9 +10,15 @@ const profileSchema = new mongoose.Schema(
     },
     avatar: {
       type: String,
-      required: true
+      required: false
     },
     posts: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Post'
+      }
+    ],
+    favorites: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Post'

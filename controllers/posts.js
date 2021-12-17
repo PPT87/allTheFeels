@@ -4,7 +4,6 @@ import { Post } from "../models/post.js"
 
 const index = async (req, res) => {
   try{
-    console.log("at index page")
     const posts = await Post.find({})
     .populate('added_by')
     .sort({ createdAt: 'desc' })
