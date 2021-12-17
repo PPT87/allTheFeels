@@ -13,7 +13,7 @@ router.use(decodeUserFromToken)
 router.post('/', checkAuth, postCtrl.create)
 router.get('/:id', postCtrl.show)
 router.put('/:id', checkAuth, postCtrl.update)
-// router.delete('/:id', checkAuth, postCtrl.delete)
+router.delete('/:id', checkAuth, postCtrl.delete)
 // Comments
 // router.post('/:id/comments', checkAuth, postCtrl.createComment)
 // router.put('/:postId/comments/:commentId', checkAuth, postCtrl.markCommentAsSolution)
