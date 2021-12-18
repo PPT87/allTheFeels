@@ -38,7 +38,6 @@ const { id } = useParams()
     const fetchPost = async () => {
       try {
         const postData = await postService.getPostById(id)
-        console.log("POST DATA", postData)
         setPost(postData)
         setComments(postData.comments)
       } catch (error) {
@@ -60,13 +59,13 @@ const { id } = useParams()
               handleDeletePost={handleDeletePost}
               handleEditPost={handleEditPost}
             />
-            {/* <Comments
+            <Comments
               post={post}
               setPost={setPost}
               user={props.user}
               comments={comments}
               setComments={setComments}
-            /> */}
+            />
           </>
         }
       </div>
