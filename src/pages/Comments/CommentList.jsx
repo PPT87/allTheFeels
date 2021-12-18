@@ -12,7 +12,7 @@ const CommentList = (props) => {
             {comment.comment_text}
           </p>
         </div>
-      ))}
+      )).reverse()}
     </div>
   )
 }
