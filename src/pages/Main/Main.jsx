@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 // Services
 import { getAllPosts } from '../../services/postService'
@@ -24,10 +25,10 @@ const Main = () => {
     <div className="all-posts">
       {posts.map((post, index) => (
 
-        <div className="post" key={index}>
+        <Link to={`/posts/${post._id}`}><div className="post" key={index}>
           <img src={post.image} alt="img" />
           <h3>{post.title}</h3>
-        </div>
+        </div></Link>
       ))}
     </div>
   )
