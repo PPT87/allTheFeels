@@ -17,8 +17,8 @@ const PostInfo = (props) => {
       </div>
       <div className="postUser">
         <image src={props.post.added_by.avatar} alt="user avatar"></image>
-        <h2>{props.post.added_by.name}</h2>
-        <button><Link to="/edit">Edit Post</Link></button>
+        <Link to={`/profile/${props.post.added_by._id}`}><h2>{props.post.added_by.name}</h2></Link>
+        <button><Link to={`/posts/${props.post._id}/edit`}>Edit Post</Link></button>
       </div>
       <div className="postTags">
         {allTags}

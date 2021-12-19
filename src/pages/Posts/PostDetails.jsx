@@ -10,20 +10,10 @@ import Header from '../Header/Header'
 import Comments from '../Comments/Comments'
 
 const PostDetails = (props) => {
-const { id } = useParams()
+  const { id } = useParams()
 	const navigate = useNavigate()
   const [post, setPost] = useState()
   const [comments, setComments] = useState([])
-
-  const handleEditPost = async (postId) => {
-    try {
-      const updatedPost = await postService.updatePost(postId)
-      setPost(updatedPost)
-      navigate(`/posts/${postId}`)
-    } catch (error) {
-      throw error
-    }
-  }
 
   const handleDeletePost = async (postId) => {
     try {
@@ -57,7 +47,6 @@ const { id } = useParams()
               post={post}
               user={props.user}
               handleDeletePost={handleDeletePost}
-              handleEditPost={handleEditPost}
             />
             <Comments
               post={post}
