@@ -4,9 +4,9 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
-import Profiles from './pages/Profiles/Profiles'
+import Profile from './pages/Profile/Profile'
 import CreatePost from './components/PostForm/CreatePost'
-// import EditPost from './pages/Posts/EditPost'
+import EditPost from './pages/Posts/EditPost'
 import PostDetails from './pages/Posts/PostDetails'
 import Main from './pages/Main/Main'
 import * as authService from './services/authService'
@@ -57,8 +57,8 @@ const App = () => {
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
         <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          path="/profile/:id"
+          element={user ? <Profile user={user}/> : <Navigate to="/login" />}
         />
         <Route path='/main'
           element={<Main user={user} />}
@@ -66,10 +66,10 @@ const App = () => {
         <Route path='/posts/:id'
           element={<PostDetails user={user} />}
         />
-        {/* <Route
+        <Route
           path="/posts/:id/edit"
-          element={user ? <EditPost /> : <Navigate to="/login" />}
-        /> */}
+          element={user ? <EditPost user={user}/> : <Navigate to="/login" />}
+        />
         <Route path="/new"
           element={user ? <CreatePost user={user}/> : <Navigate to="/signin"/>}
         />

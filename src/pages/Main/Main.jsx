@@ -6,7 +6,7 @@ import { getAllPosts } from '../../services/postService'
 
 
 // Components 
-
+import Header from '../Header/Header'
 
 const Main = () => {
 
@@ -23,6 +23,7 @@ const Main = () => {
 
   return (
     <div className="all-posts">
+      <Header title="Home" />
       {posts.map((post, index) => (
 
         <Link to={`/posts/${post._id}`}><div className="post" key={index}>
