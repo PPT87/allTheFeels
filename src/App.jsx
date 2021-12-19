@@ -5,6 +5,10 @@ import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
+import CreatePost from './components/PostForm/CreatePost'
+import EditPost from './pages/Posts/EditPost'
+import PostDetails from './pages/Posts/PostDetails'
+import Main from './pages/Main/Main'
 import * as authService from './services/authService'
 
 const App = () => {
@@ -55,6 +59,19 @@ const App = () => {
         <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
+        />
+        {/* <Route path='/posts'
+          element={<Main user={user} />}
+        /> */}
+        <Route path='/posts/:id'
+          element={<PostDetails user={user} />}
+        />
+        <Route
+          path="/posts/:id/edit"
+          element={user ? <EditPost /> : <Navigate to="/login" />}
+        />
+        <Route path="/new"
+          element={user ? <CreatePost user={user}/> : <Navigate to="/signin"/>}
         />
       </Routes>
       <div>
