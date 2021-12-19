@@ -60,16 +60,16 @@ const App = () => {
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
-        {/* <Route path='/posts'
+        <Route path='/main'
           element={<Main user={user} />}
-        /> */}
+        />
         <Route path='/posts/:id'
           element={<PostDetails user={user} />}
         />
-        <Route
+        {/* <Route
           path="/posts/:id/edit"
           element={user ? <EditPost /> : <Navigate to="/login" />}
-        />
+        /> */}
         <Route path="/new"
           element={user ? <CreatePost user={user}/> : <Navigate to="/signin"/>}
         />
