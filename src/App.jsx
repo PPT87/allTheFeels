@@ -60,7 +60,7 @@ const App = () => {
           path="/profile/:id"
           element={user ? <Profile user={user}/> : <Navigate to="/login" />}
         />
-        <Route path='/main'
+        <Route path='/posts'
           element={<Main user={user} />}
         />
         <Route path='/posts/:id'

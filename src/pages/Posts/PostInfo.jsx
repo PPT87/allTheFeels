@@ -6,7 +6,8 @@ const PostInfo = (props) => {
   const allTags = props.post.tags.map((tag) => (
     <h3>{tag.tagName}</h3>
   ))
-
+  
+  
   return (
     <div className="postInfo">
       <div className="postImage">

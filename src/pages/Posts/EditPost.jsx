@@ -29,6 +29,16 @@ const EditPost = () => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
 
+  const handleDeletePost = async (postId) => {
+    try {
+      await postService.deletePost(postId)
+      navigate('/posts')
+    } catch (error) {
+      throw error
+    }
+  }
+
+
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -93,6 +103,7 @@ const EditPost = () => {
       <div className="border"></div>
       <button type="submit">Save Changes</button>
     </form>
+    <button onClick={() => handleDeletePost(id)}>Delete</button>
   </div>
   )
 }
