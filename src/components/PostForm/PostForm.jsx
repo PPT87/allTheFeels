@@ -2,7 +2,7 @@ import React from 'react'
 
 const PostForm = (props) => {
   return (
-    <form className="create-form" onSubmit={props.handleCreatePost}>
+    <form className="create-form" onSubmit={props.handleSubmit}>
       <div className="title-prompt">
         <label>Add Title: </label>
       </div>
@@ -15,7 +15,16 @@ const PostForm = (props) => {
         onChange={(e) => props.setTitle(e.target.value)}
       />
 
-      {/* add image selection here */}
+      <div className="image-prompt">
+        <label>Add an Image: </label>
+      </div>
+      <input
+        required
+        type='file'
+        name="image"
+        placeholder="Upload Image Here"
+        onChange={(e) => props.setImage(e.target.files[0])}
+      />
 
       <div className="body-prompt">
         <label>Add Description: </label>
