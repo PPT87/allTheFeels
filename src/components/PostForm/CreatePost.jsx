@@ -11,22 +11,44 @@ import { createPost } from '../../services/postService'
 const CreatePost = (props) => {
 
   const navigate = useNavigate()
+  const [image, setImage ] = useState('')
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [tags, setTags] = useState('')
 
   const formData = {
-    title: title, 
+    title: title,
+    image: image,
     body: body, 
     tags: tags,
     added_by: props.user.profile, 
   }
 
-  const handleCreatePost = async (e) => {
+  const handleCreatePost = async (finalFormData) => {
+    try {
+      const newPost = await createPost(finalFormData)
+      console.log(newPost) //<= verify new post data
+    } catch (error) {
+      throw error
+    }
+  }
+  const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const newPost = await createPost(formData)
-      console.log(newPost) //<= verify new post data
+      let finalFormData = { ...formData }
+      if (image) {
+        const data = new FormData()
+        data.append('file', image)
+        data.append("upload_preset", "rkjmljnm")
+        data.append('folder', 'allthefeels')
+        data.append("cloud_name","allthefeels")
+        const res = await (await fetch("https://api.cloudinary.com/v1_1/allthefeels/image/upload", {
+          method: "post",
+          body: data
+        })).json()
+        finalFormData['image'] = res.url;
+      }
+      handleCreatePost(finalFormData)
       navigate('/posts')
     } catch (error) {
       throw error
@@ -46,7 +68,10 @@ const CreatePost = (props) => {
       tags={tags}
       setTags={setTags}
 
+      setImage={setImage}
+
       handleCreatePost={handleCreatePost}
+      handleSubmit={handleSubmit}
     />
   </div>
   )

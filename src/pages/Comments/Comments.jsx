@@ -1,3 +1,4 @@
+import { process_params } from "express/lib/router"
 import React from "react"
 import * as postService from '../../services/postService'
 
@@ -34,10 +35,13 @@ const Comments = (props) => {
           {...props} 
           handleCreateComment={handleCreateComment}
         />
-        <CommentList
-          comments={props.comments}
-          handleDeleteComment={handleDeleteComment}
-        />
+        {props.comments?.map((comment) => (
+          <CommentList
+            comment={comment}
+            user={props.user}
+            handleDeleteComment={handleDeleteComment}
+          />
+        )).reverse()}
       </div>
     </div>
   )
