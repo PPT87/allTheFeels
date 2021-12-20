@@ -28,16 +28,20 @@ export const createPost = async (post) => {
   }
 }
 
-export const updatePost = async (postId) => {
+export const updatePost = async (post) => {
+  console.log(post)
   try {
-    const res = await fetch(`${BASE_URL}${postId}`, {
+    const res = await fetch(`${BASE_URL}/${post._id}`, {
       method: "PUT",
       headers: {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + tokenService.getToken()
-      }
+      },
+      body: JSON.stringify(post)
     })
+    console.log(res)
     const data = await res.json()
+    console.log(data)
     return data
   } catch (error) {
     throw error

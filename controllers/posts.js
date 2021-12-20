@@ -43,13 +43,18 @@ const show = async (req, res) => {
 }
 
 const update = async (req, res) => {
+  console.log(req.body)
+  req.body.tags = req.body.tags.replace(/\s''/g).split(", ").map(function(tag) {
+    return { "tagName": tag } 
+  })
   try {
     const updatedPost = await Post.findByIdAndUpdate(
       req.params.id,
       req.body,
       { new: true }
     )
-    return res.status(204).json(updatedPost)
+    console.log(updatedPost)
+    return res.status(200).json(updatedPost)
   } catch (err) {
     return res.status(500).json(err)
   }

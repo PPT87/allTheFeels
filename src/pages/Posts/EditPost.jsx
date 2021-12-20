@@ -8,26 +8,15 @@ import Header from '../../pages/Header/Header'
 import * as postService from '../../services/postService'
 
 const EditPost = () => {
+  const [formData, setFormData] = useState({})
   const { id } = useParams()
   const navigate = useNavigate()
-  const [post, setPost] = useState()
 
-  const [title, setTitle] = useState('')
-  const [body, setBody] = useState('')
-  const [tags, setTags] = useState([])
-
-  // const formData = {
-  //   title: title, 
-  //   body: body, 
-  //   tags: tags,
-  //   added_by: props.user.profile, 
-  // }
 
   const handleEditPost = async (e) => {
     e.preventDefault()
     try {
-      const updatedPost = await postService.updatePost(e)
-      setPost(updatedPost)
+      const updatedPost = await postService.updatePost(formData)
       console.log(updatedPost)
       console.log("THIS IS NAVIGATING TO POST/ID")
       navigate(`/posts/${id}`)
@@ -36,23 +25,27 @@ const EditPost = () => {
     }
   }
 
+  const handleChange = (evt) => {
+    setFormData({ ...formData, [evt.target.name]: evt.target.value })
+  }
+
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const postData = await postService.getPostById(id)
-        setTitle(postData.title)
-        setBody(postData.body)
-        const mappedTags = postData.tags.map((tag) => (
+        console.log(postData)        
+        postData.tags = postData.tags.map((tag) => (
           tag.tagName
         )).join(', ')
-        setTags(mappedTags)
+        setFormData(postData)
       } catch (error) {
         throw error
       }
     }
     fetchPost()
   }, [id])
-  console.log(body, title, tags)
+
+  console.log('this is form data', formData)
   
   return (
     <div className="layout">
@@ -66,8 +59,8 @@ const EditPost = () => {
         name="title"
         autoComplete='off'
         placeholder="Enter title here"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        value={formData.title}
+        onChange={handleChange}
       />
 
       {/* add image selection here */}
@@ -81,8 +74,8 @@ const EditPost = () => {
           name="body"
           autoComplete='off'
           placeholder="Enter description here"
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
+          value={formData.body}
+          onChange={handleChange}
         />
 
       <div className="tags-prompt">
@@ -93,8 +86,8 @@ const EditPost = () => {
           name="tags"
           autoComplete='off'
           placeholder="Ex: apple, pear, tiger"
-          value={tags}
-          onChange={(e) => setTags(e.target.value)}
+          value={formData.tags}
+          onChange={handleChange}
         />        
 
       <div className="border"></div>
