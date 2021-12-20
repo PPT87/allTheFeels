@@ -1,18 +1,24 @@
 import React from "react"
 
 const CommentList = (props) => {
+  const authorId = props.comment.commenter?._id ? props.comment.commenter._id : props.comment.commenter
+  const isAuthor = props.user?.profile === authorId
+  console.log(props.user)
+
   return (
     <div className="comment-card">
-      {props.comments?.map((comment) => (
-
+      
         <div className="comment">
-          <img src={comment.commenter.avatar} alt="user avatar" />
-          <h3>{comment.commenter.name}</h3>
+          <img src={props.comment.commenter.avatar} alt="user avatar" />
+          <h3>{props.comment.commenter.name}</h3>
           <p>
-            {comment.comment_text}
+            {props.comment.comment_text}
           </p>
+          {isAuthor &&
+          <button onClick={() => props.handleDeleteComment(props.comment._id)}>Delete</button>
+          }
         </div>
-      )).reverse()}
+      
     </div>
   )
 }
