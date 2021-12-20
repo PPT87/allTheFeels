@@ -12,7 +12,6 @@ const CreatePost = (props) => {
 
   const navigate = useNavigate()
   const [image, setImage ] = useState('')
-  const [ url, setUrl ] = useState('')
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [tags, setTags] = useState('')
