@@ -11,9 +11,11 @@ import Header from '../Header/Header'
 
 const Main = (props) => {
   const { id } = useParams()
+  
 
   const [posts, setPosts] = useState([])
   const [profile, setProfile] = useState({})
+  props.setTitle(`${profile?.name}'s Profile`)
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -42,7 +44,6 @@ const Main = (props) => {
 
   return (
     <div className="all-posts">
-      <Header title={profile?.name} />
       {sortedPosts.map((post, index) => (
 
         <Link to={`/posts/${post._id}`}><div className="post" key={index}>

@@ -1,9 +1,14 @@
 import styles from './Landing.module.css'
+import { Link } from 'react-router-dom'
 
-const Landing = ({ user }) => {
+const Landing = ({ user, setTitle }) => {
+  setTitle('')
   return (
     <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+      <div className="landing-button-container">
+          <button><Link to="/signup">Sign Up</Link></button>
+          <button><Link to="/login">Log In</Link></button>
+        </div>
     </main>
   )
 }
