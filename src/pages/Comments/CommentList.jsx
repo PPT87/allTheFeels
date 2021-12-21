@@ -3,7 +3,6 @@ import React from "react"
 const CommentList = (props) => {
   const authorId = props.comment.commenter?._id ? props.comment.commenter._id : props.comment.commenter
   const isAuthor = props.user?.profile === authorId
-  console.log(props.user)
 
   return (
     <div className="comment-card">

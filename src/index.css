@@ -21,6 +21,7 @@ body {
   display: flex;
   font-size: 20px;
   overflow: scroll;
+  min-height: 100vh;
 }
 
 code {

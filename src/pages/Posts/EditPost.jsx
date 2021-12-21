@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router'
+import { useParams} from 'react-router'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 // Components
 import Header from '../../pages/Header/Header'
@@ -8,17 +9,30 @@ import Header from '../../pages/Header/Header'
 import * as postService from '../../services/postService'
 
 const EditPost = () => {
-  const [formData, setFormData] = useState({})
   const { id } = useParams()
+  const location = useLocation()
   const navigate = useNavigate()
-
+  const [image, setImage] = useState('')
+  const [formData, setFormData] = useState(location.state)
+  const {title, body, tags} = formData
 
   const handleEditPost = async (e) => {
     e.preventDefault()
     try {
-      const updatedPost = await postService.updatePost(formData)
-      console.log(updatedPost)
-      console.log("THIS IS NAVIGATING TO POST/ID")
+      let finalFormData = { ...formData }      
+      if (image) {
+        const data = new FormData()
+        data.append('file', image)
+        data.append("upload_preset", "rkjmljnm")
+        data.append('folder', 'allthefeels')
+        data.append("cloud_name","allthefeels")
+        const res = await (await fetch("https://api.cloudinary.com/v1_1/allthefeels/image/upload", {
+          method: "post",
+          body: data
+        })).json()
+        finalFormData.image=res.url
+      }
+      const updatedPost = await postService.updatePost(finalFormData)
       navigate(`/posts/${id}`)
     } catch (error) {
       throw error
@@ -38,12 +52,10 @@ const EditPost = () => {
     }
   }
 
-
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const postData = await postService.getPostById(id)
-        console.log(postData)        
+        const postData = await postService.getPostById(id)      
         postData.tags = postData.tags.map((tag) => (
           tag.tagName
         )).join(', ')
@@ -55,11 +67,9 @@ const EditPost = () => {
     fetchPost()
   }, [id])
 
-  console.log('this is form data', formData)
-  
+
   return (
     <div className="layout">
-      <Header title="Edit Post"/>
       <form className="create-form" onSubmit={handleEditPost}>
       <div className="title-prompt">
         <label>Edit Title: </label>
@@ -69,11 +79,19 @@ const EditPost = () => {
         name="title"
         autoComplete='off'
         placeholder="Enter title here"
-        value={formData.title}
+        value={title}
         onChange={handleChange}
       />
 
-      {/* add image selection here */}
+      <div className="image-prompt">
+        <label>Add an Image: </label>
+      </div>
+      <input
+        type='file'
+        name="image"
+        onChange={(e) => setImage(e.target.files[0])}
+      />
+
 
       <div className="body-prompt">
         <label>Edit Description: </label>
@@ -84,7 +102,7 @@ const EditPost = () => {
           name="body"
           autoComplete='off'
           placeholder="Enter description here"
-          value={formData.body}
+          value={body}
           onChange={handleChange}
         />
 
@@ -96,7 +114,7 @@ const EditPost = () => {
           name="tags"
           autoComplete='off'
           placeholder="Ex: apple, pear, tiger"
-          value={formData.tags}
+          value={tags}
           onChange={handleChange}
         />        
 

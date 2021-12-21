@@ -9,7 +9,6 @@ import CreatePost from './components/PostForm/CreatePost'
 import EditPost from './pages/Posts/EditPost'
 import PostDetails from './pages/Posts/PostDetails'
 import Main from './pages/Main/Main'
-import styles from './App.css'
 import * as authService from './services/authService'
 
 const App = () => {
@@ -29,9 +28,12 @@ const App = () => {
   }
 
   return (
-    <>  
-      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout}/>
+    <> 
+      <header>
+      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout} />
+      </header>
       <div onClick={()=> showNav? setShowNav(!showNav) : null}>
+    
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
@@ -61,6 +63,7 @@ const App = () => {
         />
       </Routes>
       </div>
+      
     </>
   )
 }

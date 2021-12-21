@@ -19,7 +19,6 @@ const Main = (props) => {
     const fetchProfile = async () => {
       try {
         const profileData = await getProfileById(id)
-        console.log(profileData)
         setProfile(profileData)
       } catch (error) {
         throw error
@@ -37,14 +36,9 @@ const Main = (props) => {
     return () => { setPosts([]) }
   }, [])
 
-  // console.log(posts)
   const sortedPosts = posts.filter(post => 
     post.added_by._id === id
   )
-
-  
-    // console.log(profileName[0].name)
-  // const name = profileName[0].name
 
   return (
     <div className="all-posts">

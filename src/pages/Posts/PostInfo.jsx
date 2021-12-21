@@ -9,7 +9,6 @@ const PostInfo = (props) => {
   const authorId = props.post.added_by?._id ? props.post.added_by._id : props.post.added_by
   const isAuthor = props.user?.profile === authorId
 
-  console.log(props.post.image)
   return (
     <div className="postInfo">
       <div className="postImage">
@@ -29,7 +28,7 @@ const PostInfo = (props) => {
         {allTags}
       </div>
       {isAuthor &&
-        <button><Link to={`/posts/${props.post._id}/edit`}>Edit Post</Link></button>
+        <button><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
       } 
     </div>
   )

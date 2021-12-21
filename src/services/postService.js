@@ -29,7 +29,6 @@ export const createPost = async (post) => {
 }
 
 export const updatePost = async (post) => {
-  console.log(post)
   try {
     const res = await fetch(`${BASE_URL}/${post._id}`, {
       method: "PUT",
@@ -39,9 +38,7 @@ export const updatePost = async (post) => {
       },
       body: JSON.stringify(post)
     })
-    console.log(res)
     const data = await res.json()
-    console.log(data)
     return data
   } catch (error) {
     throw error

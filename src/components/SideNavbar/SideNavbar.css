@@ -14,11 +14,12 @@
 .sidenav{
   width: 250px;
   background-color: burlywood;
-  position: absolute;
-  height: 95vh;
+  position: fixed;
+  min-height: 100vh;
   padding: 0 30px;
   transition: all 1s;
   left: -100%;
+  z-index: 1;
 }
 
 .sidenav.active{

@@ -27,7 +27,6 @@ const CreatePost = (props) => {
   const handleCreatePost = async (finalFormData) => {
     try {
       const newPost = await createPost(finalFormData)
-      console.log(newPost) //<= verify new post data
     } catch (error) {
       throw error
     }
