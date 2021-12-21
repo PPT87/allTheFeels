@@ -15,7 +15,6 @@ const Comments = (props) => {
       throw error
     }
   }
-  console.log(props.comments)
 
   const handleDeleteComment = async (commentId) => {
     try {

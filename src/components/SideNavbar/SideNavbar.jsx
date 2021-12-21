@@ -8,8 +8,7 @@ import { VscSignIn } from 'react-icons/vsc'
 
 
 const SideNavbar = ({ user, handleLogout, showNav }) =>{
-  console.log()
-
+  
 return(
   <>
       {user ?

@@ -16,8 +16,6 @@ const EditPost = () => {
   const [formData, setFormData] = useState(location.state)
   const {title, body, tags} = formData
 
-
-
   const handleEditPost = async (e) => {
     e.preventDefault()
     try {
@@ -33,11 +31,8 @@ const EditPost = () => {
           body: data
         })).json()
         finalFormData.image=res.url
-        console.log(finalFormData.image)
-
       }
       const updatedPost = await postService.updatePost(finalFormData)
-      console.log(updatedPost)
       navigate(`/posts/${id}`)
     } catch (error) {
       throw error
@@ -60,8 +55,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const postData = await postService.getPostById(id)
-        console.log(postData)        
+        const postData = await postService.getPostById(id)      
         postData.tags = postData.tags.map((tag) => (
           tag.tagName
         )).join(', ')
@@ -74,7 +68,6 @@ const EditPost = () => {
   }, [id])
 
 
-  
   return (
     <div className="layout">
       <form className="create-form" onSubmit={handleEditPost}>

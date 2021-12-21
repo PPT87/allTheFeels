@@ -43,7 +43,6 @@ const show = async (req, res) => {
 }
 
 const update = async (req, res) => {
-  console.log(req.body)
   req.body.tags = req.body.tags.replace(/\s''/g).split(", ").map(function(tag) {
     return { "tagName": tag } 
   })
@@ -53,7 +52,6 @@ const update = async (req, res) => {
       req.body,
       { new: true }
     )
-    console.log(updatedPost)
     return res.status(200).json(updatedPost)
   } catch (err) {
     return res.status(500).json(err)
