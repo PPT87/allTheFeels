@@ -29,7 +29,7 @@ const PostInfo = (props) => {
         {allTags}
       </div>
       {isAuthor &&
-        <button><Link to={`/posts/${props.post._id}/edit`}>Edit Post</Link></button>
+        <button><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
       } 
     </div>
   )
