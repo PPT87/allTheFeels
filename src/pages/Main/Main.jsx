@@ -10,10 +10,11 @@ import { getAllPosts } from '../../services/postService'
 
 
 const Main = (props) => {
-  props.setTitle('Home')
   const [posts, setPosts] = useState([])
+  
 
   useEffect(() => {
+    props.setTitle('Home')
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
       setPosts(postData)
@@ -26,8 +27,8 @@ const Main = (props) => {
     <div className="all-posts">
       <div className="wrapper">
       {posts.map((post, index) => (
-      <Link to={`/posts/${post._id}`}>
-        <div className="media" key={index}>
+      <Link to={`/posts/${post._id}`} key={index}>
+        <div className="media" >
           <div className="layer">
             <p>{post.title}</p>
             <p>By: {post.added_by.name}</p>
