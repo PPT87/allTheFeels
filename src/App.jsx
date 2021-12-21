@@ -38,7 +38,7 @@ const App = () => {
       <div onClick={()=> showNav? setShowNav(!showNav) : null}>
     
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing user={user} setTitle={setTitle} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} setTitle={setTitle} />}
