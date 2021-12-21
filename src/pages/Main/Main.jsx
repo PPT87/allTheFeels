@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import '../Main/Main.css'
 
 // Services
 import { getAllPosts } from '../../services/postService'
@@ -24,13 +25,21 @@ const Main = () => {
   return (
     <div className="all-posts">
       <Header title="Home" />
+      <div className="wrapper">
       {posts.map((post, index) => (
-
-        <Link to={`/posts/${post._id}`}><div className="post" key={index}>
-          <img src={post.image} alt="img" />
-          <h3>{post.title}</h3>
-        </div></Link>
+      <Link to={`/posts/${post._id}`}>
+        <div className="media">
+          <div className="layer">
+            <p>{post.title}</p>
+            <p>By: {post.added_by.name}</p>
+          </div>
+            <div className="post" key={index}>
+              <img src={post.image} alt="img" />
+            </div>
+          </div>
+        </Link>
       ))}
+      </div>
     </div>
   )
 }

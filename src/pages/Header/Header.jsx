@@ -8,7 +8,7 @@ const Header = (props) => {
     <>
       <div className="hidden-container">
         <div className="header">
-          <h3>{props.title}</h3>
+          <h1>{props.title}</h1>
         </div>
       </div>
       <div className="spacing-block" />
