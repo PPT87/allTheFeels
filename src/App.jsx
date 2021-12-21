@@ -14,12 +14,13 @@ import * as authService from './services/authService'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
-
   const [showNav, setShowNav] = useState(false)
+  const [title, setTitle] = useState('')
 
   const handleLogout = () => {
     authService.logout()
     setUser(null)
+    setTitle('')
     navigate('/')
   }
 
@@ -27,10 +28,12 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+
+
   return (
     <> 
       <header>
-      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout} />
+      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout} title={title}/>
       </header>
       <div onClick={()=> showNav? setShowNav(!showNav) : null}>
     
@@ -38,28 +41,28 @@ const App = () => {
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
+          element={<Signup handleSignupOrLogin={handleSignupOrLogin} setTitle={setTitle} />}
         />
         <Route
           path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
+          element={<Login handleSignupOrLogin={handleSignupOrLogin} setTitle={setTitle}/>}
         />
         <Route
           path="/profile/:id"
-          element={user ? <Profile user={user}/> : <Navigate to="/login" />}
+          element={user ? <Profile user={user} setTitle={setTitle}/> : <Navigate to="/login" />}
         />
         <Route path='/posts'
-          element={<Main user={user} />}
+          element={<Main user={user} setTitle={setTitle}/>}
         />
         <Route path='/posts/:id'
-          element={user ? <PostDetails user={user}/> : <Navigate to="/login"/>}
+          element={user ? <PostDetails user={user} /> : <Navigate to="/login"/>}
         />
         <Route
           path="/posts/:id/edit"
-          element={user ? <EditPost user={user}/> : <Navigate to="/login" />}
+          element={user ? <EditPost user={user} setTitle={setTitle}/> : <Navigate to="/login" />}
         />
         <Route path="/new"
-          element={user ? <CreatePost user={user}/> : <Navigate to="/login"/>}
+          element={user ? <CreatePost user={user} setTitle={setTitle}/> : <Navigate to="/login"/>}
         />
       </Routes>
       </div>

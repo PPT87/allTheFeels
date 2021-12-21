@@ -8,13 +8,15 @@ import Header from '../../pages/Header/Header'
 //Services
 import * as postService from '../../services/postService'
 
-const EditPost = () => {
+const EditPost = (props) => {
   const { id } = useParams()
   const location = useLocation()
   const navigate = useNavigate()
   const [image, setImage] = useState('')
   const [formData, setFormData] = useState(location.state)
   const {title, body, tags} = formData
+
+  props.setTitle('Edit Post')
 
   const handleEditPost = async (e) => {
     e.preventDefault()

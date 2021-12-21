@@ -7,10 +7,10 @@ import { getAllPosts } from '../../services/postService'
 
 
 // Components 
-import Header from '../Header/Header'
 
-const Main = () => {
 
+const Main = (props) => {
+  props.setTitle('Home')
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -24,7 +24,6 @@ const Main = () => {
 
   return (
     <div className="all-posts">
-      <Header title="Home" />
       <div className="wrapper">
       {posts.map((post, index) => (
       <Link to={`/posts/${post._id}`}>

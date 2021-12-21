@@ -6,7 +6,6 @@ import * as postService from '../../services/postService'
 
 // Components
 import PostInfo from '../Posts/PostInfo'
-import Header from '../Header/Header'
 import Comments from '../Comments/Comments'
 
 const PostDetails = (props) => {
@@ -14,6 +13,7 @@ const PostDetails = (props) => {
 	const navigate = useNavigate()
   const [post, setPost] = useState()
   const [comments, setComments] = useState([])
+
 
   const handleDeletePost = async (postId) => {
     try {
@@ -39,7 +39,6 @@ const PostDetails = (props) => {
 
   return (
     <div className="layout">
-      <Header title="Post Details" />
       <div className="post-details">
         {post &&  
           <>

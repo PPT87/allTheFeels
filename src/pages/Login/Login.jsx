@@ -4,6 +4,7 @@ import styles from './Login.module.css'
 
 const LoginPage = props => {
   const [message, setMessage] = useState([''])
+  props.setTitle('Log In')
 
   const updateMessage = msg => {
     setMessage(msg)
@@ -11,7 +12,6 @@ const LoginPage = props => {
 
   return (
     <main className={styles.container}>
-      <h1>Log In</h1>
       <p>{message}</p>
       <LoginForm
         handleSignupOrLogin={props.handleSignupOrLogin}
