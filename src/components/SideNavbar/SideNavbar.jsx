@@ -5,10 +5,11 @@ import { BsPerson, BsPersonPlus } from 'react-icons/bs'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { BiLogOut } from 'react-icons/bi'
 import { VscSignIn } from 'react-icons/vsc'
+import styles from '../SideNavbar/SideNavbar.css'
 
 
 const SideNavbar = ({ user, handleLogout, showNav }) =>{
-  
+
 return(
   <>
       {user ?

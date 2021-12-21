@@ -9,7 +9,6 @@ import CreatePost from './components/PostForm/CreatePost'
 import EditPost from './pages/Posts/EditPost'
 import PostDetails from './pages/Posts/PostDetails'
 import Main from './pages/Main/Main'
-import styles from './App.css'
 import * as authService from './services/authService'
 
 const App = () => {
