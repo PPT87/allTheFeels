@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const PostInfo = (props) => {
 
-  const allTags = props.post.tags.map((tag) => (
-    <h3>{tag.tagName}</h3>
+  const allTags = props.post.tags.map((tag, index) => (
+    <h3 key={index} >{tag.tagName}</h3>
   ))
   const authorId = props.post.added_by?._id ? props.post.added_by._id : props.post.added_by
   const isAuthor = props.user?.profile === authorId

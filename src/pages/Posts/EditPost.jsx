@@ -3,7 +3,6 @@ import { useParams} from 'react-router'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 // Components
-import Header from '../../pages/Header/Header'
 
 //Services
 import * as postService from '../../services/postService'
@@ -34,7 +33,7 @@ const EditPost = (props) => {
         })).json()
         finalFormData.image=res.url
       }
-      const updatedPost = await postService.updatePost(finalFormData)
+      await postService.updatePost(finalFormData)
       navigate(`/posts/${id}`)
     } catch (error) {
       throw error
