@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams} from 'react-router'
 import { useLocation, useNavigate } from 'react-router-dom'
-import '../Posts/PostDetails.css'
+import './PostDetails.css'
 
 // Components
 import Header from '../../pages/Header/Header'

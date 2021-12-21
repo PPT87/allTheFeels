@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import '../Posts/PostDetails.css'
+import './PostDetails.css'
 
 // Services
 import * as postService from '../../services/postService'

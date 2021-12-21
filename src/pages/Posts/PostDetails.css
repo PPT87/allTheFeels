@@ -1,0 +1,24 @@
+.postImage{
+  width: 200px;
+  overflow: hidden;
+}
+.postImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms;
+}
+
+.postImage img:hover{
+  transform: scale(1.2);
+}
+
+.leftContainer {
+  display:flex;
+
+}
+.leftContainer header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
