@@ -29,9 +29,12 @@ const App = () => {
   }
 
   return (
-    <>  
-      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout}/>
+    <> 
+      <header>
+      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout} />
+      </header>
       <div onClick={()=> showNav? setShowNav(!showNav) : null}>
+    
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
@@ -61,6 +64,7 @@ const App = () => {
         />
       </Routes>
       </div>
+      
     </>
   )
 }

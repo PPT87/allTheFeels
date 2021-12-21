@@ -10,7 +10,7 @@ const Header = (props) => {
     <>
       <div className="hidden-container">
         <div className="header">
-          <SideNavbar showNav={props.showNav} />
+          <SideNavbar showNav={props.showNav} user={props.user} />
           <GiHamburgerMenu onClick={() => props.setShowNav(!props.showNav)}/>
           <h1>{props.title}</h1>
         </div>
