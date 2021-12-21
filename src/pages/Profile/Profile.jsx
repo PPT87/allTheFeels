@@ -7,7 +7,6 @@ import { getAllPosts } from '../../services/postService'
 import { getProfileById } from '../../services/profileService'
 
 // Components 
-import Header from '../Header/Header'
 
 const Main = (props) => {
   const { id } = useParams()

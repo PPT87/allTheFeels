@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router'
 
 // Components
 import PostForm from './PostForm'
-import Header from '../../pages/Header/Header'
 
 //Services
 import { createPost } from '../../services/postService'
@@ -28,7 +27,7 @@ const CreatePost = (props) => {
 
   const handleCreatePost = async (finalFormData) => {
     try {
-      const newPost = await createPost(finalFormData)
+      await createPost(finalFormData)
     } catch (error) {
       throw error
     }

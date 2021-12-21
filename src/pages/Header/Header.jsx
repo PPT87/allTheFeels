@@ -1,11 +1,9 @@
 import React from "react"
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { useNavigate } from "react-router-dom"
 import SideNavbar from '../../components/SideNavbar/SideNavbar'
 
 
 const Header = (props) => {
-  const navigate = useNavigate()
   return (
     <>
       <div className="hidden-container">
