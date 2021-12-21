@@ -45,6 +45,10 @@ ul li a{
   border-radius: 16px;
 }
 
+ul li a svg{
+  margin-right: 15px;
+}
+
 ul li a:hover,
 ul li a.active{
 background-color: blue;
