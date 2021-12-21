@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo/logo-desktop.png'
 
 
-const SideNavbar = ({ user, handleLogout, setShowNav }) =>{
+const SideNavbar = ({ user, handleLogout, showNav }) =>{
   console.log()
 
 return(
   <>
       {user ?
-        <nav className={setShowNav ? 'sidenav active' : 'sidenav'}>
+        <nav className={showNav ? 'sidenav active' : 'sidenav'}>
           <img src={logo} alt="logo" className='logo'/>
           <ul>
             <li>Welcome, {user.name}</li>

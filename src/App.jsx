@@ -36,7 +36,7 @@ const App = () => {
       <header>
         <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
       </header>
-      <SideNavbar user={user} handleLogout={handleLogout} setShowNav={setShowNav}/>
+      <SideNavbar user={user} handleLogout={handleLogout} showNav={showNav}/>
     </div>
       {/* <NavBar user={user} handleLogout={handleLogout} /> */}
       <Routes>
