@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-// import NavBar from './components/NavBar/NavBar'
-import SideNavbar from './components/SideNavbar/SideNavbar'
+import Header from './pages/Header/Header'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
@@ -10,7 +9,6 @@ import CreatePost from './components/PostForm/CreatePost'
 import EditPost from './pages/Posts/EditPost'
 import PostDetails from './pages/Posts/PostDetails'
 import Main from './pages/Main/Main'
-import { GiHamburgerMenu } from 'react-icons/gi'
 import styles from './App.css'
 import * as authService from './services/authService'
 
@@ -32,13 +30,8 @@ const App = () => {
 
   return (
     <>  
-    <div className='App'>
-      <header>
-        <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
-      </header>
-      <SideNavbar user={user} handleLogout={handleLogout} showNav={showNav}/>
-    </div>
-      {/* <NavBar user={user} handleLogout={handleLogout} /> */}
+      <Header user={user} showNav={showNav} setShowNav={setShowNav} handleLogout={handleLogout}/>
+      <div onClick={()=> showNav? setShowNav(!showNav) : null}>
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
@@ -67,6 +60,7 @@ const App = () => {
           element={user ? <CreatePost user={user}/> : <Navigate to="/login"/>}
         />
       </Routes>
+      </div>
     </>
   )
 }

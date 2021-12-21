@@ -57,7 +57,6 @@ const CreatePost = (props) => {
 
   return (
     <div className="layout">
-    <Header title='Create Post' />
     <PostForm
       title={title}
       setTitle={setTitle}

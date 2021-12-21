@@ -1,5 +1,7 @@
 import React from "react"
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { useNavigate } from "react-router-dom"
+import SideNavbar from '../../components/SideNavbar/SideNavbar'
 
 
 const Header = (props) => {
@@ -8,6 +10,8 @@ const Header = (props) => {
     <>
       <div className="hidden-container">
         <div className="header">
+          <SideNavbar showNav={props.showNav} />
+          <GiHamburgerMenu onClick={() => props.setShowNav(!props.showNav)}/>
           <h1>{props.title}</h1>
         </div>
       </div>

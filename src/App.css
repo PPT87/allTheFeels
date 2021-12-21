@@ -1,15 +1,15 @@
-body{  
+/* body{  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
-header{
+/* header{
   padding: 30px;
   background: black;
   height: 50px;
   color: aliceblue;
-}
+} */
 
 .sidenav{
   width: 250px;
