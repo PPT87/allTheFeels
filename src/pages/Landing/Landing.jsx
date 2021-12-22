@@ -1,15 +1,19 @@
-import styles from './Landing.module.css'
+import '../Landing/LandingStyle.css'
 import { Link } from 'react-router-dom'
 
-const Landing = ({ user, setTitle }) => {
-  setTitle('')
+import Logo from '../../assets/logo/logo.png'
+
+const Landing = () => {
   return (
-    <main className={styles.container}>
-      <div className="landing-button-container">
+    <div className="landing-page">
+      <div className="landing-elements">
+        <img className="logo-splash" src={Logo} alt="logo"></img>
+        <div className="landing-button-container">
           <button><Link to="/signup">Sign Up</Link></button>
-          <button><Link to="/login">Log In</Link></button>
+          <button><Link to="/signin">Sign In</Link></button>
         </div>
-    </main>
+      </div>
+    </div>
   )
 }
 
