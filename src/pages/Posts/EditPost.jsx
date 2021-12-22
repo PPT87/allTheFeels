@@ -16,8 +16,6 @@ const EditPost = (props) => {
   const [formData, setFormData] = useState(location.state)
   const {title, body, tags} = formData
 
-  props.setTitle('Edit Post')
-
   const handleEditPost = async (e) => {
     e.preventDefault()
     try {
@@ -72,7 +70,7 @@ const EditPost = (props) => {
 
   return (
     <div className="layout">
-
+        <h1 className='edit-title'>Edit Post</h1>
       <form className="create-form" onSubmit={handleEditPost}>
 
         <div className='horizontal-group'>
@@ -121,7 +119,7 @@ const EditPost = (props) => {
         <div className="tags-prompt">
           <label>Edit Tags: </label>
         </div>
-          <input
+          <textarea className='tags-input'
             style={{height: "100px", width: "300px"}}
             required
             name="tags"

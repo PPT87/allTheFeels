@@ -10,11 +10,8 @@ header{
 }
 
 header .hamburger{
-  margin-top: 10px;
-  margin-left: 20px;
-  display: flex;
-  font-size: 30px;
-  position: fixed;
+  padding-left: 20px;
+  font-size: 50px;
 }
 
 header .close-block{
@@ -38,15 +35,22 @@ header .logo{
 
 }
 
+.link-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .sidenav{
   width: 250px;
   background-color: rgba(222, 184, 135, 0.9);
-  position: fixed;
+  position: absolute;
   min-height: 100vh;
   padding: 0;
   transition: all 1s;
   left: -100%;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .sidenav.active{
@@ -55,7 +59,6 @@ header .logo{
 
 ul{
   padding: 0;
-
 }
 
 ul li{
@@ -66,7 +69,7 @@ ul li{
 ul li a{
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   display: block;
   padding: 10px 15px;
   transition: all 0.25s;
@@ -79,17 +82,9 @@ ul li a svg{
 
 ul li a:hover,
 ul li a.active{
-background-color: blue;
+  background-color: rgba(233, 209, 177, 0.9);
 }
 
-btnWrapper{
+.btnWrapper{
   display: flex;
-}
-
-.updateBtn{
-  margin-right: 10px;
-}
-
-.deleteBtn{
-  margin-left: 10px;
 }

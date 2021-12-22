@@ -1,9 +1,12 @@
 import React from 'react'
 import '../../components/PostForm/CreatePost.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'react-bootstrap'
 
 const PostForm = (props) => {
   return (
     <form className="create-form" onSubmit={props.handleSubmit}>
+      <h1 className='create-title'>Create A Post</h1>
         <div className='horizontal-group'>
           <div className='form-group left'>
             <div className="title-prompt">
@@ -52,7 +55,7 @@ const PostForm = (props) => {
           <div className="tags-prompt">
             <label>Add Tags: </label>
           </div>
-            <input className='tags-input'
+            <textarea className='tags-input' 
               style={{height: "100px", width: "300px"}}
               required
               name="tags"
@@ -62,7 +65,9 @@ const PostForm = (props) => {
               onChange={(e) => props.setTags(e.target.value)}
             />
         </div>
-      <button type="submit">Create Post</button>
+          <div className='createBtn-wrapper' variant="primary">
+            <button type="submit" className='createBtn'>Create Post</button>
+          </div>
     </form>
   )
 }
