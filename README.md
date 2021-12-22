@@ -36,7 +36,7 @@ Logo icon: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-<div>Hover over cards <a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100"></a> from <a href="https://www.codepen.io/" title="Codepen">www.codepen.io</a></div>
+Code for <a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">Hover over cards effect</a>
 
 
 
