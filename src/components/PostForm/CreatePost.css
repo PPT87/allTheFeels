@@ -26,6 +26,10 @@
   padding-bottom: 25px;
 }
 
+.deleteBtn{
+  margin-left: 10px;
+}
+
 .description{
   text-align: center;
 }
@@ -64,3 +68,8 @@
 .title-prompt{
   padding-bottom: 10px;
 }
+
+.updateBtn{
+  margin-right: 10px;
+}
+

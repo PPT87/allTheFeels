@@ -1,5 +1,7 @@
 import React from 'react'
 import '../../components/PostForm/CreatePost.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'react-bootstrap'
 
 const PostForm = (props) => {
   return (
@@ -53,7 +55,7 @@ const PostForm = (props) => {
           <div className="tags-prompt">
             <label>Add Tags: </label>
           </div>
-            <textarea className='tags-input'
+            <textarea className='tags-input' 
               style={{height: "100px", width: "300px"}}
               required
               name="tags"
@@ -63,7 +65,7 @@ const PostForm = (props) => {
               onChange={(e) => props.setTags(e.target.value)}
             />
         </div>
-          <div className='createBtn-wrapper'>
+          <div className='createBtn-wrapper' variant="primary">
             <button type="submit" className='createBtn'>Create Post</button>
           </div>
     </form>
