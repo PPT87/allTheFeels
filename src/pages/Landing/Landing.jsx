@@ -10,7 +10,7 @@ const Landing = () => {
         <img className="logo-splash" src={Logo} alt="logo"></img>
         <div className="landing-button-container">
           <button><Link to="/signup">Sign Up</Link></button>
-          <button><Link to="/signin">Sign In</Link></button>
+          <button><Link to="/login">Sign In</Link></button>
         </div>
       </div>
     </div>
