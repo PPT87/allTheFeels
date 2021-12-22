@@ -16,19 +16,21 @@ const CreateComment = (props) => {
   }
 
   return (
-    <form className="create-form" onSubmit={handleSubmit}>
+    <div className="form-div">
+      <form className="create-form" onSubmit={handleSubmit}>
 
-      <textarea
-        required
-        autoComplete='off'
-        placeholder="Add Comment Here"
-        name="comment_text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
+        <textarea
+          required
+          autoComplete='off'
+          placeholder="Add Comment Here"
+          name="comment_text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   )
 }
 

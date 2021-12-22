@@ -1,31 +1,71 @@
+.comment-section {
+  width: 750px;
+}
 .card-header {
   display: flex;
   flex-direction: column;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
 }
-.create-form{
-  display: inherit;
-  align-self: center;
-  width: 20%;
-  height: 20%;
+.form-div{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  border-bottom: solid 1px black;
+}
+
+.comment {
+  display: flex;
+  border-bottom: solid 1px black;
 }
 
 .comment-section h2{
   justify-content: center;
   text-align: center;
   font-size: 4rem;
+  margin-top: 20px;
 }
 
-.create-form textarea{
-  margin-top: 20px;
+.form-div textarea{
+  margin-top: 45px;
+  margin-left: 150px;
   width: 400px;
   height: 100px;
 }
 
-.create-form button {
-  margin-top: 20px;
+.form-div button {
   width: 100px;
   margin: 35px;
   background: #5095e9;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+}
+
+.comment img {
+  height: 100px;
+  margin: 20px;
+}
+
+.comment h3 {
+  margin: 80px 15px 0 15px;
+  text-align: center;
+  font-size:3rem;
+}
+
+.comment p {
+  margin: 20px;
+  text-align: center;
+  width: 311px;
+}
+
+.comment button {
+  margin-top: 20px;
+  width: 100px;
+  margin: 45px;
+  background: rgb(255, 54, 54);
   border: none;
   border-radius: 7px;
   color: white;
