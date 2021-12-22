@@ -5,15 +5,17 @@ import { BsPerson, BsPersonPlus } from 'react-icons/bs'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { BiLogOut } from 'react-icons/bi'
 import { VscSignIn } from 'react-icons/vsc'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 import'../SideNavbar/SideNavbar.css'
 
 
-const SideNavbar = ({ user, handleLogout, showNav }) =>{
+const SideNavbar = ({ user, handleLogout, showNav, setShowNav}) =>{
 
 return(
   <>
       {user ?
         <nav className={showNav ? 'sidenav active' : 'sidenav'}>
+          <AiOutlineCloseCircle onClick={() => setShowNav(!showNav)}/>
           <img src={logo} alt="logo" className='logo'/>
           <ul>
             <li>Welcome, {user.name}</li>

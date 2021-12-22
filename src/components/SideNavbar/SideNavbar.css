@@ -1,8 +1,12 @@
 header h1{
   color: blue;
   font-weight: 900;
+  justify-content: center;
 }
 
+header{
+  background-color: coral;
+}
 
 
 .sidenav{
