@@ -1,3 +1,14 @@
+.postInfo{
+  width: 100vw;
+  height:100vh;
+  padding: 100px;
+}
+
+.leftContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
 .postImage{
   width: 200px;
   overflow: hidden;
@@ -13,23 +24,21 @@
   transform: scale(1.2);
 }
 
-.leftContainer {
-  display:flex;
-
-}
 .leftContainer header{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-/* .postInfo{
-  width: 100vw;
-  height: 100vh;
-} */
 
 .postUser{
+  margin-left: 50px;
   box-sizing: border-box;
   border: 1px solid #292934;
+  flex-direction: column;
 }
 
+.postTitle{
+  padding:
+  
+}
