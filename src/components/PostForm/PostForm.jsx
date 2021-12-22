@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../components/PostForm/CreatePost.css'
 
 const PostForm = (props) => {
   return (
@@ -10,6 +11,7 @@ const PostForm = (props) => {
             </div>
               <input className='title-input'
                 required
+                style={{height: "30px", width: "400px"}}
                 name="title"
                 autoComplete='off'
                 placeholder="Enter title here"
@@ -21,7 +23,7 @@ const PostForm = (props) => {
             <div className="image-prompt">
           <label>Add an Image: </label>
         </div>
-          <input
+          <input className='image-input'
             required
             type='file'
             name="image"
@@ -31,11 +33,11 @@ const PostForm = (props) => {
           </div>
         </div>
 
-        <div className='form-group'>
+        <div className='form-group description'>
           <div className="body-prompt">
             <label>Add Description: </label>
           </div>
-            <textarea
+            <textarea className='body-input'
               required
               style={{height: "300px", width: "900px"}}
               name="body"
@@ -46,7 +48,7 @@ const PostForm = (props) => {
           />
         </div>
 
-        <div className='form-group'>
+        <div className='form-group tags'>
           <div className="tags-prompt">
             <label>Add Tags: </label>
           </div>

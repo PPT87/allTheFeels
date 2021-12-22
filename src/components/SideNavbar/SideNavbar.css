@@ -1,15 +1,9 @@
-/* body{  
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
+header h1{
+  color: blue;
+  font-weight: 900;
+}
 
-/* header{
-  padding: 30px;
-  background: black;
-  height: 50px;
-  color: aliceblue;
-} */
+
 
 .sidenav{
   width: 250px;
