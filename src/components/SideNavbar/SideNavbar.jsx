@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logo/logo-desktop.png'
+import logo from '../../assets/logo/happysadneutral.png'
 import { GoHome } from 'react-icons/go'
 import { BsPerson, BsPersonPlus } from 'react-icons/bs'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
@@ -15,8 +15,13 @@ return(
   <>
       {user ?
         <nav className={showNav ? 'sidenav active' : 'sidenav'}>
-          <AiOutlineCloseCircle onClick={() => setShowNav(!showNav)}/>
-          <img src={logo} alt="logo" className='logo'/>
+            <div className='close-block'>
+              <AiOutlineCloseCircle onClick={() => setShowNav(!showNav)} className='closeBtn'/>
+            </div>
+            <div className='logo-block'>
+              <img src={logo} alt="logo" className='logo'/>
+            </div>
+
           <ul>
             <li>Welcome, {user.name}</li>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
