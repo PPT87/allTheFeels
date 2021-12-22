@@ -36,7 +36,8 @@ Logo icon: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-Code for <a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">Hover over cards effect</a>
+Code for <a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">Hover over cards effect</a> from <a href="www.codepen.io">www.codepen.io</a>
 
+We wanted to also give a huge shoutout to https://github.com/slavdefense/Backlog-MERN-Stack for their help in helping us get the image upload feature working in our app.
 
 
