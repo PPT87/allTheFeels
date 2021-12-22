@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
+import '../../components/PostForm/CreatePost.css'
 
 // Components
 import PostForm from './PostForm'
