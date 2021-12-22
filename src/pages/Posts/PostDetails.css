@@ -1,7 +1,12 @@
-.postInfo{
+.post-details{
   width: 100vw;
   height:100vh;
-  padding: 100px;
+  padding: 50px;
+  overflow: scroll;
+}
+
+.postInfo{
+  padding: ;
 }
 
 .leftContainer {
@@ -39,6 +44,8 @@
 }
 
 .postTitle{
-  padding:
+  padding:60px;
+  font-size: 10px;
+
   
 }

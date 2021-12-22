@@ -1,6 +1,6 @@
 import React from "react"
 import * as postService from '../../services/postService'
-import '../Comments/CommentDetails.css'
+
 
 //Components
 import CommentList from './CommentList'
