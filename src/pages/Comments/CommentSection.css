@@ -1,13 +1,33 @@
+.card-header {
+  display: flex;
+  flex-direction: column;
+}
+.create-form{
+  display: inherit;
+  align-self: center;
+  width: 20%;
+  height: 20%;
+}
+
 .comment-section h2{
   justify-content: center;
   text-align: center;
-  font-size: 15px;
+  font-size: 4rem;
 }
 
-.create-form{
-  justify-content: center;
+.create-form textarea{
+  margin-top: 20px;
+  width: 400px;
+  height: 100px;
 }
 
-.create-form label{
-  font-size: 12px;
+.create-form button {
+  margin-top: 20px;
+  width: 100px;
+  margin: 35px;
+  background: #5095e9;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
 }

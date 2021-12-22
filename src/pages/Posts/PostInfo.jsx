@@ -16,7 +16,6 @@ const PostInfo = (props) => {
         <div className="postImage">
           <img src={props.post.image} alt="User Uploaded Img"/>
         </div>
-        <header>
           <div className="postTitle">
             <h1>{props.post.title}</h1>
           </div>
@@ -28,7 +27,6 @@ const PostInfo = (props) => {
               <button><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
       } 
           </div>
-        </header>
       </div>
       <div className="postBody">
         <p>{props.post.body}</p>

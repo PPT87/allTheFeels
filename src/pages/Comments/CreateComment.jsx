@@ -17,21 +17,15 @@ const CreateComment = (props) => {
 
   return (
     <form className="create-form" onSubmit={handleSubmit}>
-      <div className="comment-prompt">
-        <label>Enter a Comment</label>
-      </div>
 
       <textarea
         required
-        style={{height: "200px", width: "200px"}}
         autoComplete='off'
-        placeholder="Comment"
+        placeholder="Add Comment Here"
         name="comment_text"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-
-      <div className="border"></div>
 
       <button type="submit">Submit</button>
     </form>

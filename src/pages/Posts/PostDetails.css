@@ -5,6 +5,12 @@
   overflow: scroll;
 }
 
+.leftContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .postInfo {
   justify-content: center;
   align-content: center;
@@ -18,9 +24,15 @@
   margin-left: 10px;
 }
 
-.postUser{
-  display: flex;
-  margin-right: 800px;
+.postUser {
+  display: inherit;
+  align-self: flex-start;
+  padding-left: 10px;
+}
+
+.postImage {
+  width: 45%;
+  overflow: hidden;
 }
 
 .postUser button {
@@ -73,16 +85,6 @@
   text-align: center;
 }
 
-.leftContainer {
-  display:flex;
-  align-items: center;
-  flex-direction: column;
-}
-.postImage{
-  width: 45%;
-  overflow: hidden;
-}
-
 .leftContainer header{
   display: flex;
   flex-direction: column;
@@ -96,8 +98,8 @@
   transition: transform 600ms;
 }
 
-.postImage img:hover{
-  transform: scale(1.2);
-}
+/* .postImage img:hover{
+  transform: scale(1.1);
+} */
 
 
