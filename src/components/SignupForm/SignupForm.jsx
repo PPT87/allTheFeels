@@ -103,7 +103,7 @@ const SignupForm = props => {
           </form>
           <div className="redirect-container">
             <p>Already have an account?</p>
-            <Link className="redirect-link" to="/signin">
+            <Link className="redirect-link" to="/login">
               Log In
             </Link>
           </div>

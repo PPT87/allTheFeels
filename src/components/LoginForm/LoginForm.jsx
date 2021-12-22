@@ -29,7 +29,6 @@ const LoginForm = props => {
 
   return (
     <div className="signup-page">
-      <div className='left-container'>
 
         <div className='form-container'>
           <div className="title-container">
@@ -66,7 +65,7 @@ const LoginForm = props => {
               autoComplete="off"
               id="submit-button"
               type="submit"
-            >Log IN</button>
+            >Log In</button>
           </form>
           <div className="redirect-container">
             <p>Don't have an account?</p>
@@ -76,12 +75,6 @@ const LoginForm = props => {
           </div>
 
         </div>
-
-      </div>
-
-      <div className="right-container">
-        {/* <Animation animData={coder}/> */}
-      </div>
 
     </div>
   )
