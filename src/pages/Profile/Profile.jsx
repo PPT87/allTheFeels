@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router'
+import '../Main/MainPage.css'
 
 // Services
 import { getAllPosts } from '../../services/postService'
@@ -43,13 +44,21 @@ const Main = (props) => {
 
   return (
     <div className="all-posts">
+      <h1 className="title">Home</h1>
+      <div className="wrapper">
       {sortedPosts.map((post, index) => (
-
-        <Link to={`/posts/${post._id}`}><div className="post" key={index}>
-          <img src={post.image} alt="img" />
-          <h3>{post.title}</h3>
-        </div></Link>
+      <Link to={`/posts/${post._id}`} key={index}>
+        <div className="media" >
+          <div className="layer">
+            <p>{post.title}</p>
+          </div>
+          <div className="post" >
+            <img src={post.image} alt="img" />
+          </div>
+        </div>
+      </Link>
       ))}
+      </div>
     </div>
   )
 }

@@ -24,7 +24,7 @@ const Main = (props) => {
 
   return (
     <div className="all-posts">
-      <h1 className="home-title">Home</h1>
+      <h1 className="title">Home</h1>
       <div className="wrapper">
       {posts.map((post, index) => (
       <Link to={`/posts/${post._id}`} key={index}>
@@ -33,11 +33,11 @@ const Main = (props) => {
             <p>{post.title}</p>
             <p>By: {post.added_by.name}</p>
           </div>
-            <div className="post" >
-              <img src={post.image} alt="img" />
-            </div>
+          <div className="post" >
+            <img src={post.image} alt="img" />
           </div>
-        </Link>
+        </div>
+      </Link>
       ))}
       </div>
     </div>
