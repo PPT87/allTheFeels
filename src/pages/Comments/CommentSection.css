@@ -1,0 +1,13 @@
+.comment-section h2{
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+}
+
+.create-form{
+  justify-content: center;
+}
+
+.create-form label{
+  font-size: 12px;
+}

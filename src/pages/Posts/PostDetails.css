@@ -1,5 +1,45 @@
+.post-details{
+  width: 100vw;
+  height:100vh;
+  padding: 80px;
+  overflow: scroll;
+}
+
+
+.postInfo {
+  justify-content: center;
+  align-content: center;
+}
+
+.postInfo h1{
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+.postTitle{
+  padding:10px;
+}
+
+.postBody h1{
+  font-size:20px;
+  text-align: center;
+}
+
+.postTags h3{
+  font-size:15px;
+  text-align: center;
+}
+
+.leftContainer h2{
+  text-align: center;
+}
+.leftContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
 .postImage{
-  width: 200px;
+  width: 45%;
   overflow: hidden;
 }
 .postImage img{
@@ -13,23 +53,19 @@
   transform: scale(1.2);
 }
 
-.leftContainer {
-  display:flex;
-
-}
 .leftContainer header{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-/* .postInfo{
-  width: 100vw;
-  height: 100vh;
-} */
 
 .postUser{
+  margin-left: 50px;
   box-sizing: border-box;
   border: 1px solid #292934;
+  display: flex;
+  padding: 
 }
+
 
