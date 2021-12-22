@@ -23,7 +23,7 @@ const CreateComment = (props) => {
 
       <textarea
         required
-        style={{height: "200px", width: "200px"}}
+        style={{height: "200px", width: "400px"}}
         autoComplete='off'
         placeholder="Comment"
         name="comment_text"
