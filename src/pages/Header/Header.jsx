@@ -8,8 +8,8 @@ const Header = (props) => {
     <>
       <div className="hidden-container">
         <div className="header">
-          <SideNavbar showNav={props.showNav} user={props.user} handleLogout={props.handleLogout}/>
-          <GiHamburgerMenu onClick={() => props.setShowNav(!props.showNav)}/>
+          <SideNavbar showNav={props.showNav} setShowNav={props.setShowNav} user={props.user} handleLogout={props.handleLogout}/>
+          <GiHamburgerMenu onClick={() => props.setShowNav(!props.showNav)} className='hamburger'/>
           <h1>{props.title}</h1>
         </div>
       </div>
