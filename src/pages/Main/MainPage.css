@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro:200,300,400,600');
-body {
+.all-posts {
   
   display: flex;
   flex-direction: column;

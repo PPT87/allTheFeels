@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../Main/Main.css'
+import '../Main/MainPage.css'
 
 // Services
 import { getAllPosts } from '../../services/postService'

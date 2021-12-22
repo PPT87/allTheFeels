@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import Header from './pages/Header/Header'
-import Signup from './pages/Signup/Signup'
-import Login from './pages/Login/Login'
+import SignupForm from './components/SignupForm/SignupForm'
+import LoginForm from './components/LoginForm/LoginForm'
 import Landing from './pages/Landing/Landing'
 import Profile from './pages/Profile/Profile'
 import CreatePost from './components/PostForm/CreatePost'
@@ -41,11 +41,11 @@ const App = () => {
         <Route path="/" element={<Landing user={user} setTitle={setTitle} />} />
         <Route
           path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} setTitle={setTitle} />}
+          element={<SignupForm handleSignupOrLogin={handleSignupOrLogin} setTitle={setTitle} />}
         />
         <Route
           path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} setTitle={setTitle}/>}
+          element={<LoginForm handleSignupOrLogin={handleSignupOrLogin}/>}
         />
         <Route
           path="/profile/:id"
