@@ -5,6 +5,8 @@ const CommentList = (props) => {
   const authorId = props.comment.commenter?._id ? props.comment.commenter._id : props.comment.commenter
   const isAuthor = props.user?.profile === authorId
 
+  console.log(props.comment.commenter)
+
   return (
     <div className="comment-card">
       
