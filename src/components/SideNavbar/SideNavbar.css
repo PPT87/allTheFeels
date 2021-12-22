@@ -1,22 +1,49 @@
-/* body{  
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
+header h1{
+  color: blue;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
 
-/* header{
-  padding: 30px;
-  background: black;
-  height: 50px;
-  color: aliceblue;
-} */
+header{
+  margin: 0;
+}
+
+header .hamburger{
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  font-size: 30px;
+  position: fixed;
+}
+
+header .close-block{
+  display: flex;
+}
+
+header .closeBtn{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+header .logo-block{
+  display: flex;
+  justify-content: center;
+}
+
+header .logo{
+  width: 100px;
+
+}
 
 .sidenav{
   width: 250px;
-  background-color: burlywood;
+  background-color: rgba(222, 184, 135, 0.9);
   position: fixed;
   min-height: 100vh;
-  padding: 0 30px;
+  padding: 0;
   transition: all 1s;
   left: -100%;
   z-index: 1;
@@ -37,12 +64,13 @@ ul li{
 }
 
 ul li a{
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 16px;
   display: block;
   padding: 10px 15px;
-  border-radius: 16px;
+  transition: all 0.25s;
+  
 }
 
 ul li a svg{
@@ -54,10 +82,14 @@ ul li a.active{
 background-color: blue;
 }
 
-.logo{
-  width: 250px;
+btnWrapper{
+  display: flex;
 }
 
-header svg {
-  font-size: 25px;
+.updateBtn{
+  margin-right: 10px;
+}
+
+.deleteBtn{
+  margin-left: 10px;
 }

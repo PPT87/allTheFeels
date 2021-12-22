@@ -12,6 +12,7 @@ html {
     font-size: 62.5%
 }
 html, body, #root {
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,6 +25,7 @@ html, body, #root {
   min-height: 100vh;
   width: 100vw;
   background-color: rgb(206, 228, 252);
+
 }
 
 code {

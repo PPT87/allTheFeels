@@ -1,0 +1,28 @@
+.create-form{
+  width: 100vw;
+  height: 100vh;
+}
+
+.horizontal-group{
+  justify-content: center;
+  gap: 90px;
+  display: flex;
+  height: 20vh;
+}
+
+.title-prompt{
+  padding-bottom: 10px;
+}
+
+.image-prompt{
+  padding-bottom: 10px;
+}
+
+.body-prompt{
+  padding-bottom: 10px;
+}
+
+.tags-prompt{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
