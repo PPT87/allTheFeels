@@ -78,7 +78,7 @@ const EditPost = (props) => {
             <div className="title-prompt">
               <label>Edit Title: </label>
             </div>
-              <input
+              <input className='title-input'
               style={{height: "30px", width: "400px"}}
                 required
                 name="title"
@@ -104,7 +104,7 @@ const EditPost = (props) => {
         <div className="body-prompt">
           <label>Edit Description: </label>
         </div>
-          <textarea
+          <textarea className='body-input'
             required
             style={{height: "300px", width: "900px"}}
             name="body"

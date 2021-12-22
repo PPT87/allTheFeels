@@ -29,7 +29,6 @@ const PostForm = (props) => {
             required
             type='file'
             name="image"
-            placeholder="Upload Image Here"
             onChange={(e) => props.setImage(e.target.files[0])}
           />
           </div>
