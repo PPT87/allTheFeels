@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../Main/Main.css'
+import '../Main/MainPage.css'
 
 // Services
 import { getAllPosts } from '../../services/postService'
@@ -9,12 +9,11 @@ import { getAllPosts } from '../../services/postService'
 // Components 
 
 
-const Main = (props) => {
+const Main = () => {
   const [posts, setPosts] = useState([])
   
 
   useEffect(() => {
-    props.setTitle('Home')
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
       setPosts(postData)
@@ -25,6 +24,7 @@ const Main = (props) => {
 
   return (
     <div className="all-posts">
+      <h1 className="title">Home</h1>
       <div className="wrapper">
       {posts.map((post, index) => (
       <Link to={`/posts/${post._id}`} key={index}>
@@ -33,11 +33,11 @@ const Main = (props) => {
             <p>{post.title}</p>
             <p>By: {post.added_by.name}</p>
           </div>
-            <div className="post" >
-              <img src={post.image} alt="img" />
-            </div>
+          <div className="post" >
+            <img src={post.image} alt="img" />
           </div>
-        </Link>
+        </div>
+      </Link>
       ))}
       </div>
     </div>

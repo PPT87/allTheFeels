@@ -11,8 +11,8 @@ html {
 :root {
     font-size: 62.5%
 }
+html, body, #root {
 
-body{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,9 +24,16 @@ body{
   overflow: scroll;
   min-height: 100vh;
   width: 100vw;
+  background-color: rgb(206, 228, 252);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root{
+  overflow-y: hidden;
+  height: 100vh;
 }
