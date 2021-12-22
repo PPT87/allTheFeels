@@ -3,11 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #e2f7fc;
   overflow: scroll;
   text-align: center;
 }
-h1 {
+.home-title {
 	font-family: 'Source Sans Pro', sans-serif;
   font-size: 45px;
 	color: #151e3f;
@@ -45,7 +44,8 @@ h1 {
   align-items: center;
   width: 10px;
   height: 90%;
-  background: rgb(255, 255, 255);
+  background: #eef4f6;
+  ;
   color: #151e3f;
   transition: all 0.9s ease;
   flex-direction: column;

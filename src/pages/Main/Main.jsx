@@ -14,7 +14,6 @@ const Main = (props) => {
   
 
   useEffect(() => {
-    props.setTitle('Home')
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
       setPosts(postData)
@@ -25,6 +24,7 @@ const Main = (props) => {
 
   return (
     <div className="all-posts">
+      <h1 className="home-title">Home</h1>
       <div className="wrapper">
       {posts.map((post, index) => (
       <Link to={`/posts/${post._id}`} key={index}>
