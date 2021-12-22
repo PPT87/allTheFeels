@@ -9,13 +9,12 @@ import { getProfileById } from '../../services/profileService'
 
 // Components 
 
-const Main = (props) => {
+const Profile = () => {
   const { id } = useParams()
   
 
   const [posts, setPosts] = useState([])
   const [profile, setProfile] = useState({})
-  props.setTitle(`${profile?.name}'s Profile`)
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -44,7 +43,7 @@ const Main = (props) => {
 
   return (
     <div className="all-posts">
-      <h1 className="title">Home</h1>
+      <h1 className="title">{profile?.name}'s Profile</h1>
       <div className="wrapper">
       {sortedPosts.map((post, index) => (
       <Link to={`/posts/${post._id}`} key={index}>
@@ -64,4 +63,4 @@ const Main = (props) => {
 }
 
 
-export default Main
+export default Profile

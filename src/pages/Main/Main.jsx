@@ -9,7 +9,7 @@ import { getAllPosts } from '../../services/postService'
 // Components 
 
 
-const Main = (props) => {
+const Main = () => {
   const [posts, setPosts] = useState([])
   
 
