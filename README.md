@@ -1,17 +1,20 @@
-## :notebook: Background:
+## Background:
+Have you ever felt happy, sad, annoyed, excited, anxious, etc. Did you know creating art heals pain? 
+All the Feels is a website that creates a place where adolescents can share their drawings, sketches, doodles. It's a place where users can connect with a community where they have the abilty to comment on other people's posts in a positive way.
 
 
-## :camera: All the Feels Screenshots
+
+
+## All the Feels Screenshots
 
 
 
 
-## :point_right: [Try Me Out!](https://allthefeelsapp.herokuapp.com/)
+##  [Try Me Out!](https://allthefeelsapp.herokuapp.com/)
 You can check out my Trello board [HERE!](https://trello.com/b/gQTYPmew/all-the-feels
-
 )
 
-## :star: Technologies Used
+## Technologies Used
 - JavaScript
 - CSS
 - Express
@@ -22,7 +25,7 @@ You can check out my Trello board [HERE!](https://trello.com/b/gQTYPmew/all-the-
 - HTML
 - Bootstrap
   
-## :star:Future Additions:
+## Future Additions:
 - Add a search bar at the top of the page, and have it be able to search through tags and see posts that contain that tag.
 - Add a filter option to filter through tags.
 - Add a feature that allows me to favorite a post.
@@ -30,7 +33,7 @@ You can check out my Trello board [HERE!](https://trello.com/b/gQTYPmew/all-the-
 - Make it mobile responsive.
 
 
-## :green_heart: Credits
+## Credits
 
 Logo icon: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
