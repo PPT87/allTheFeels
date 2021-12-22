@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./CommentSection.css"
 
 const CommentList = (props) => {
   const authorId = props.comment.commenter?._id ? props.comment.commenter._id : props.comment.commenter

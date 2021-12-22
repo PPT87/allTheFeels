@@ -1,21 +1,45 @@
 .post-details{
   width: 100vw;
   height:100vh;
-  padding: 50px;
+  padding: 80px;
   overflow: scroll;
 }
 
-.postInfo{
-  padding: ;
+
+.postInfo {
+  justify-content: center;
+  align-content: center;
 }
 
+.postInfo h1{
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+.postTitle{
+  padding:10px;
+}
+
+.postBody h1{
+  font-size:20px;
+  text-align: center;
+}
+
+.postTags h3{
+  font-size:15px;
+  text-align: center;
+}
+
+.leftContainer h2{
+  text-align: center;
+}
 .leftContainer {
   display:flex;
   align-items: center;
   flex-direction: column;
 }
 .postImage{
-  width: 200px;
+  width: 45%;
   overflow: hidden;
 }
 .postImage img{
@@ -40,12 +64,8 @@
   margin-left: 50px;
   box-sizing: border-box;
   border: 1px solid #292934;
-  flex-direction: column;
+  display: flex;
+  padding: 
 }
 
-.postTitle{
-  padding:60px;
-  font-size: 10px;
 
-  
-}
