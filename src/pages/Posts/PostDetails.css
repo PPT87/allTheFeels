@@ -23,7 +23,12 @@
   justify-content: flex-start;
 }
 
-.postInfo{
+/* .postInfo{
   width: 100vw;
   height: 100vh;
+} */
+
+.postUser{
+  box-sizing: border-box;
+  border: 1px solid #292934;
 }
