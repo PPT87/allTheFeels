@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../components/PostForm/CreatePost.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'react-bootstrap'
 
 const PostForm = (props) => {
   return (

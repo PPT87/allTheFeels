@@ -2,10 +2,27 @@
   padding-bottom: 10px; 
 }
 
+.body-input{
+  background-color: aliceblue;
+  color: rgb(88, 94, 100);
+  border-radius: 5px;
+}
+
 .btnWrapper{
   display: flex;
   justify-content: center;
   padding-top: 25px;
+}
+
+.createBtn{
+  background-color: rgb(88, 94, 100);
+  color: aliceblue;
+  border-radius: 10px;
+  transition: all;
+}
+
+.createBtn:hover{
+  background-color: rgb(170, 173, 173);
 }
 
 .createBtn-wrapper{
@@ -24,6 +41,7 @@
   margin: 0;
   padding-top: 20px;
   padding-bottom: 25px;
+  color: rgb(88, 94, 100);
 }
 
 .deleteBtn{
@@ -57,12 +75,23 @@
 }
 
 .tags-input{
-  
+  background-color: aliceblue;
+  color: rgb(88, 94, 100);
+  border-radius: 5px;
 }
 
 .tags-prompt{
   padding-top: 30px;
   padding-bottom: 10px;
+}
+
+.title-input{
+  background-color: aliceblue;
+  color: rgb(88, 94, 100);
+  border-radius: 5px;
+}
+.title-input::placeholder{
+  color: rgb(88, 94, 100);
 }
 
 .title-prompt{
