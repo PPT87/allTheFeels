@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo/logo.png'
+import xLogo from '../../assets/icons/x-icon.png'
 import { GoHome } from 'react-icons/go'
 import { BsPerson, BsPersonPlus } from 'react-icons/bs'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
@@ -16,7 +17,7 @@ return(
       {user ?
         <nav className={showNav ? 'sidenav active' : 'sidenav'}>
             <div className='close-block'>
-              <AiOutlineCloseCircle onClick={() => setShowNav(!showNav)} className='closeBtn'/>
+              <img src={xLogo} alt='x-icon' onClick={() => setShowNav(!showNav)} className='closeBtn'/>
             </div>
             <div className='logo-block'>
               <img src={logo} alt="logo" className='logo'/>
@@ -26,7 +27,7 @@ return(
             <li><Link to="/posts"><GoHome /> Home</Link></li>
             <li><Link to={`/profile/${user.profile}`}><BsPerson /> Profile</Link></li>
             <li><Link to="/new"><AiOutlinePlusCircle /> Add Post</Link></li>
-            <li><Link to="" onClick={handleLogout}><BiLogOut /> LOG OUT</Link></li>
+            <li><Link to="" onClick={handleLogout}><BiLogOut /> Log Out</Link></li>
           </ul>
         </nav>
       :

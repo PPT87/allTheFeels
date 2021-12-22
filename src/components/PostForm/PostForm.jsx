@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../components/PostForm/CreatePost.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const PostForm = (props) => {
   return (
@@ -64,7 +64,7 @@ const PostForm = (props) => {
               onChange={(e) => props.setTags(e.target.value)}
             />
         </div>
-          <div className='createBtn-wrapper' variant="primary">
+          <div className='createBtn-wrapper'>
             <button type="submit" className='createBtn'>Create Post</button>
           </div>
     </form>

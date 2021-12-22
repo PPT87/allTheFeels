@@ -2,6 +2,18 @@
   display: flex;
 }
 
+.closeBtn{
+  width: 20px;
+}
+
+.close-block{
+  background-color: red;
+  position: absolute;
+  width:55px;
+  height: 40px;
+  border-bottom-right-radius: 10px;
+}
+
 header h1{
   color: blue;
   font-weight: 900;
@@ -95,6 +107,7 @@ ul li a svg{
 
 ul li a:hover,
 ul li a.active{
-  background-color: rgba(241, 240, 238);
+  background-color: aliceblue;
+  color: rgba(111, 128, 144, 0.9);
 }
 
