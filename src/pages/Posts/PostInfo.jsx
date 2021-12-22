@@ -36,6 +36,7 @@ const PostInfo = (props) => {
         <button><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
       } 
     </div>
+    
   )
 
 }
