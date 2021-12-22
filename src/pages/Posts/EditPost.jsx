@@ -131,9 +131,11 @@ const EditPost = (props) => {
             onChange={handleChange}
           />
       </div>
-      <button type="submit">Save Changes</button>
+      <div className='btnWrapper'>
+        <button type="submit" className='updateBtn'>Save Changes</button>
+        <button onClick={() => handleDeletePost(id)} className='deleteBtn'>Delete Post</button>
+      </div>
     </form>
-    <button onClick={() => handleDeletePost(id)} className='deleteBtn'>Delete Post</button>
   </div>
   )
 }

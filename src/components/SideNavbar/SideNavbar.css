@@ -82,8 +82,14 @@ ul li a.active{
 background-color: blue;
 }
 
+btnWrapper{
+  display: flex;
+}
 
+.updateBtn{
+  margin-right: 10px;
+}
 
-header svg {
-  font-size: 25px;
+.deleteBtn{
+  margin-left: 10px;
 }
