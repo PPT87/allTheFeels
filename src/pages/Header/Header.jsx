@@ -1,17 +1,15 @@
 import React from "react"
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { useNavigate } from "react-router-dom"
 import SideNavbar from '../../components/SideNavbar/SideNavbar'
 
 
 const Header = (props) => {
-  const navigate = useNavigate()
   return (
     <>
       <div className="hidden-container">
         <div className="header">
-          <SideNavbar showNav={props.showNav} user={props.user} handleLogout={props.handleLogout}/>
-          <GiHamburgerMenu onClick={() => props.setShowNav(!props.showNav)}/>
+          <SideNavbar showNav={props.showNav} setShowNav={props.setShowNav} user={props.user} handleLogout={props.handleLogout}/>
+          <GiHamburgerMenu onClick={() => props.setShowNav(!props.showNav)} className='hamburger'/>
           <h1>{props.title}</h1>
         </div>
       </div>

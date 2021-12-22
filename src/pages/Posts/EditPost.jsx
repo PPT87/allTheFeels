@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams} from 'react-router'
 import { useLocation, useNavigate } from 'react-router-dom'
-import './PostDetails.css'
+import '../../components/PostForm/CreatePost.css'
 
 // Components
-import Header from '../../pages/Header/Header'
 
 //Services
 import * as postService from '../../services/postService'
@@ -35,7 +34,7 @@ const EditPost = (props) => {
         })).json()
         finalFormData.image=res.url
       }
-      const updatedPost = await postService.updatePost(finalFormData)
+      await postService.updatePost(finalFormData)
       navigate(`/posts/${id}`)
     } catch (error) {
       throw error
@@ -73,58 +72,70 @@ const EditPost = (props) => {
 
   return (
     <div className="layout">
+
       <form className="create-form" onSubmit={handleEditPost}>
-      <div className="title-prompt">
-        <label>Edit Title: </label>
+
+        <div className='horizontal-group'>
+          <div className='form-group left'>
+            <div className="title-prompt">
+              <label>Edit Title: </label>
+            </div>
+              <input
+              style={{height: "30px", width: "400px"}}
+                required
+                name="title"
+                autoComplete='off'
+                placeholder="Enter title here"
+                value={title}
+                onChange={handleChange}
+              />
+            </div>
+              <div className='form-group right'>
+            <div className="image-prompt">
+              <label>Add an Image: </label>
+          </div>
+            <input
+              type='file'
+              name="image"
+              onChange={(e) => setImage(e.target.files[0])}
+            />
+          </div>
+        </div>
+
+      <div className='form-group description'>
+        <div className="body-prompt">
+          <label>Edit Description: </label>
+        </div>
+          <textarea
+            required
+            style={{height: "300px", width: "900px"}}
+            name="body"
+            autoComplete='off'
+            placeholder="Enter description here"
+            value={body}
+            onChange={handleChange}
+          />
       </div>
-      <input
-        required
-        name="title"
-        autoComplete='off'
-        placeholder="Enter title here"
-        value={title}
-        onChange={handleChange}
-      />
 
-      <div className="image-prompt">
-        <label>Add an Image: </label>
+      <div className='form-group tags'>
+        <div className="tags-prompt">
+          <label>Edit Tags: </label>
+        </div>
+          <input
+            style={{height: "100px", width: "300px"}}
+            required
+            name="tags"
+            autoComplete='off'
+            placeholder="Ex: apple, pear, tiger"
+            value={tags}
+            onChange={handleChange}
+          />
       </div>
-      <input
-        type='file'
-        name="image"
-        onChange={(e) => setImage(e.target.files[0])}
-      />
-
-
-      <div className="body-prompt">
-        <label>Edit Description: </label>
+      <div className='btnWrapper'>
+        <button type="submit" className='updateBtn'>Save Changes</button>
+        <button onClick={() => handleDeletePost(id)} className='deleteBtn'>Delete Post</button>
       </div>
-        <textarea
-          required
-          style={{height: "200px", width: "200px"}}
-          name="body"
-          autoComplete='off'
-          placeholder="Enter description here"
-          value={body}
-          onChange={handleChange}
-        />
-
-      <div className="tags-prompt">
-        <label>Edit Tags: </label>
-      </div>
-        <input
-          required
-          name="tags"
-          autoComplete='off'
-          placeholder="Ex: apple, pear, tiger"
-          value={tags}
-          onChange={handleChange}
-        />        
-
-      <div className="border"></div>
-      <button type="submit">Save Changes</button>
     </form>
-    <button onClick={() => handleDeletePost(id)}>Delete</button>
   </div>
   )
 }

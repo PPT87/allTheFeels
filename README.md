@@ -27,6 +27,5 @@ You can check out my Trello board [HERE!](https://trello.com/b/gQTYPmew/all-the-
 - Adding a link to a local quilt shop
 
 ## :green_heart: Credits
-- https://go.craftsy.com/
-- www.pintrest.com
-- www.etsy.com
+
+Logo icon: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

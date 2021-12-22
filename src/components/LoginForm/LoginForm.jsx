@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './LoginForm.module.css'
+import '../SignupForm/SignupFormStyle.css'
 import * as authService from '../../services/authService'
 
 const LoginForm = props => {
@@ -9,9 +9,10 @@ const LoginForm = props => {
     pw: '',
   })
   const navigate = useNavigate()
+  const [msg, setMsg] = useState('')
 
   const handleChange = e => {
-    props.updateMessage('')
+    setMsg('')
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -22,45 +23,60 @@ const LoginForm = props => {
       props.handleSignupOrLogin()
       navigate('/posts')
     } catch (err) {
-      props.updateMessage(err.message)
+      setMsg(err.message)
     }
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.pw}
-          name="pw"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className={styles.button}>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
-        </Link>
-      </div>
-    </form>
+    <div className="signup-page">
+
+        <div className='form-container'>
+          <div className="title-container">
+            <h1>Log In</h1>
+            {msg
+              ? <h3>{msg}</h3>
+              : <h3>Welcome</h3>
+            }
+
+          </div>
+
+          <form className="register-form" onSubmit={handleSubmit}>
+
+            <input
+              required
+              name="email"
+              type="email"
+              autoComplete="off"
+              placeholder="Email"
+              onChange={handleChange}
+              value={formData.email}
+            />
+            <input
+              required
+              name="pw"
+              type="password"
+              autoComplete="off"
+              placeholder="Password"
+              onChange={handleChange}
+              value={formData.pw}
+            />
+
+            <button
+              autoComplete="off"
+              id="submit-button"
+              type="submit"
+            >Log In</button>
+          </form>
+          <div className="redirect-container">
+            <p>Don't have an account?</p>
+            <Link className="redirect-link" to="/signup">
+              Sign Up
+            </Link>
+          </div>
+
+        </div>
+
+    </div>
   )
 }
 
