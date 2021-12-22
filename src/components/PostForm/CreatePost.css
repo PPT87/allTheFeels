@@ -1,28 +1,66 @@
+.body-prompt{
+  padding-bottom: 10px; 
+}
+
+.btnWrapper{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.createBtn-wrapper{
+  justify-content: center;
+  display: flex;
+  padding-top: 25px;
+}
+
 .create-form{
   width: 100vw;
   height: 100vh;
 }
 
-.horizontal-group{
-  justify-content: center;
-  gap: 90px;
-  display: flex;
-  height: 20vh;
+.create-title{
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 25px;
 }
 
-.title-prompt{
-  padding-bottom: 10px;
+.description{
+  text-align: center;
+}
+
+.edit-title{
+  text-align: center;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .image-prompt{
   padding-bottom: 10px;
 }
 
-.body-prompt{
-  padding-bottom: 10px;
+.horizontal-group{
+  justify-content: center;
+  gap: 120px;
+  display: flex;
+  height: 15vh;
+}
+
+.tags{
+  text-align: center;
+}
+
+.tags-input{
+  
 }
 
 .tags-prompt{
   padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.title-prompt{
   padding-bottom: 10px;
 }

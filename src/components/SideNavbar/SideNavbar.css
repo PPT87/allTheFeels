@@ -10,9 +10,7 @@ header{
 }
 
 header .hamburger{
-  margin-top: 10px;
   margin-left: 20px;
-  display: flex;
   font-size: 30px;
   position: fixed;
 }
@@ -41,7 +39,7 @@ header .logo{
 .sidenav{
   width: 250px;
   background-color: rgba(222, 184, 135, 0.9);
-  position: fixed;
+  position: absolute;
   min-height: 100vh;
   padding: 0;
   transition: all 1s;
@@ -82,7 +80,7 @@ ul li a.active{
 background-color: blue;
 }
 
-btnWrapper{
+.btnWrapper{
   display: flex;
 }
 

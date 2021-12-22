@@ -23,7 +23,6 @@ return(
             </div>
 
           <ul>
-            <li>Welcome, {user.name}</li>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
             <li><Link to={`/profile/${user.profile}`}><BsPerson /> Profile</Link></li>
             <li><Link to="/new"><AiOutlinePlusCircle /> Add Post</Link></li>
@@ -32,6 +31,12 @@ return(
         </nav>
       :
         <nav className={showNav ? 'sidenav active' : 'sidenav'}>  
+        <div className='close-block'>
+              <AiOutlineCloseCircle onClick={() => setShowNav(!showNav)} className='closeBtn'/>
+            </div>
+            <div className='logo-block'>
+              <img src={logo} alt="logo" className='logo'/>
+            </div>
           <ul>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
             <li><Link to="/login"><VscSignIn /> Log In</Link></li>

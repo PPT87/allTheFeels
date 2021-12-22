@@ -14,8 +14,6 @@ const CreatePost = (props) => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [tags, setTags] = useState('')
-  
-  props.setTitle('Create a Post')
 
   const formData = {
     title: title,
