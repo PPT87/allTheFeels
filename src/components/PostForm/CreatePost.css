@@ -179,6 +179,16 @@
   border-radius: 10px;
 }
 
+.create-edit-form{
+  position: absolute;
+  width: 80%;
+  border: 1px solid #cccccc;
+  margin-top: 3%;
+  margin-left: 5%;
+  background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);
+  border-radius: 10px;
+}
+
 .createBtn-wrapper{
   justify-content: center;
   display: flex;

@@ -70,7 +70,7 @@ const EditPost = (props) => {
 
   return (
     <div className="layout">
-      <form className="create-post-form" onSubmit={handleEditPost}>
+      <form className="create-edit-form" onSubmit={handleEditPost}>
         <div className='form-header'>
         <h1 className='edit-title'>Edit Post</h1>
         </div>
@@ -101,7 +101,7 @@ const EditPost = (props) => {
 
       <div className='form-group description'>
           <label className='label-title'>Edit Description: </label>
-          <textarea className='form-input body'
+          <textarea className='form-input body edit'
             required
             name="body"
             autoComplete='off'
