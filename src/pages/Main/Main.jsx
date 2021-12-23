@@ -31,7 +31,7 @@ const Main = () => {
         <div className="media" >
           <div className="layer">
             <p>{post.title}</p>
-            <p>By: {post.added_by.name}</p>
+            <p>By: {post.added_by?.name}</p>
           </div>
           <div className="post" >
             <img src={post.image} alt="img" />
