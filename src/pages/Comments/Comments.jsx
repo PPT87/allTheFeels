@@ -28,7 +28,7 @@ const Comments = (props) => {
 
   return (
     <div className="comment-section">
-      <h2>Comments</h2>
+      <h2> </h2>
       <div className="card-header">
         <CreateComment 
           {...props} 
