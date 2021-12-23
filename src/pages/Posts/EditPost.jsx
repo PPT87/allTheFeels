@@ -3,7 +3,6 @@ import { useParams} from 'react-router'
 import { useLocation, useNavigate } from 'react-router-dom'
 import '../../components/PostForm/CreatePost.css'
 
-// Components
 
 //Services
 import * as postService from '../../services/postService'
@@ -43,15 +42,6 @@ const EditPost = (props) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
 
-  const handleDeletePost = async (postId) => {
-    try {
-      await postService.deletePost(postId)
-      navigate('/posts')
-    } catch (error) {
-      throw error
-    }
-  }
-
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -67,14 +57,12 @@ const EditPost = (props) => {
     fetchPost()
   }, [id])
 
-
   return (
     <div className="layout">
       <form className="create-post-form" onSubmit={handleEditPost}>
         <div className='form-header'>
         <h1 className='edit-title'>Edit Post</h1>
         </div>
-
         <div className='form-body'>
           <div className='horizontal-group'>
             <div className='form-group left'>
@@ -96,9 +84,7 @@ const EditPost = (props) => {
                 onChange={(e) => setImage(e.target.files[0])}
               />
             </div>
-          </div>
-                
-
+          </div>          
       <div className='form-group description'>
           <label className='label-title'>Edit Description: </label>
           <textarea className='form-input body edit'
@@ -110,7 +96,6 @@ const EditPost = (props) => {
             onChange={handleChange}
           />
       </div>
-
       <div className='form-group tags'>
           <label className='label-title'>Edit Tags: </label>
           <textarea className='form-input tags'
@@ -125,7 +110,6 @@ const EditPost = (props) => {
       </div>
       <div className='btnWrapper'>
         <button type="submit" className='updateBtn'>Save Changes</button>
-        <button onClick={() => handleDeletePost(id)} className='deleteBtn'>Delete Post</button>
       </div>
     </div>
   </form>

@@ -1,8 +1,19 @@
 import React from 'react' 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
+import './PostInfo.css'
 
+import * as postService from '../../services/postService'
 
 const PostInfo = (props) => {
+  const navigate = useNavigate()
+  const handleDeletePost = async (postId) => {
+    try {
+      await postService.deletePost(postId)
+      navigate('/posts')
+    } catch (error) {
+      throw error
+    }
+  }
 
   const allTags = props.post.tags.map((tag, index) => (
     <p key={index} >{tag.tagName}</p>
@@ -24,7 +35,10 @@ const PostInfo = (props) => {
             <img src={props.post.added_by.avatar} alt="user avatar"/>
             <Link to={`/profile/${props.post.added_by._id}`}><h2>{props.post.added_by.name}</h2></Link>
             {isAuthor &&
-              <button><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
+            <>
+            <button className='deleteBtn' onClick={() => handleDeletePost(props.post._id)} >Delete Post</button>
+            <button className='updateBtn'><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
+            </>
             } 
           </div>
         </div>
@@ -33,13 +47,12 @@ const PostInfo = (props) => {
             <p>{props.post.body}</p>
           </div>
           <div className="postTags">
-            <p><b>Tags:</b> {allTags}</p>
+            <div style={{display: 'flex'}}><p><b>Tags:</b></p> {allTags}</div>
           </div>
         </div>
     </div>
     
   )
-
 }
 
 export default PostInfo
