@@ -63,7 +63,7 @@
 }
 
 .comment h3 {
-  margin: 80px 15px 0 15px;
+  margin: 80px 20px 0 20px;
   text-align: center;
   font-size:3rem;
   text-decoration: none;
@@ -75,9 +75,10 @@
 }
 
 .comment p {
-  margin: 20px;
-  text-align: center;
+  margin: 15px 30px;
+  text-align: justify;
   width: 311px;
+  font-size: 20px;
 }
 
 .comment button {

@@ -9,7 +9,6 @@
   width: 100vw;
 }
 .title {
-	font-family: 'Source Sans Pro', sans-serif;
   font-size: 45px;
 	color: #151e3f;
 	font-weight: 300;
@@ -70,7 +69,6 @@
 }
 p {
   color: black;
-  font-family: 'Inconsolata', monospace;
   text-align: center;
   font-size: 15px;
   letter-spacing: 1px;
