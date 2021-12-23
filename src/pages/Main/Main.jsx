@@ -26,8 +26,8 @@ const Main = () => {
     <div className="all-posts">
       <h1 className="title">Home</h1>
       <div className="wrapper">
-      {posts.map((post, index) => (
-      <Link to={`/posts/${post._id}`} key={index}>
+        {posts.map((post, index) => (
+        <Link to={`/posts/${post._id}`} key={index}>
         <div className="media" >
           <div className="layer">
             <p>{post.title}</p>
@@ -37,8 +37,8 @@ const Main = () => {
             <img src={post.image} alt="img" />
           </div>
         </div>
-      </Link>
-      ))}
+        </Link>
+        ))}
       </div>
     </div>
   )

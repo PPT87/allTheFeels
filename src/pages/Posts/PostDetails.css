@@ -1,56 +1,112 @@
 .post-details{
   width: 100vw;
   height:100vh;
-  padding: 80px;
+  padding-top: 50px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
+.leftContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 .postInfo {
   justify-content: center;
   align-content: center;
 }
 
-.postInfo h1{
-  font-size: 25px;
-  text-align: center;
+.postTitle {
+  padding-top: 20px;
+}
+
+.postTags {
+  margin-left: 10px;
+}
+
+.postUser {
+  display: inherit;
+  align-self: flex-start;
+  padding-left: 10px;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+  background-color: rgba(218, 218, 222, 0.797);
+  margin: 30px 0 0 0;
+}
+
+.postImage {
+  width: 45%;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+}
+
+.postInfoDiv {
+  background-color: rgba(218, 218, 222, 0.797);
+  border-radius: 10px;
+  margin: 40px 80px 40px 5%;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  width: 85%;
+
+}
+
+.postUser button {
+  margin: 35px;
+  background: #5095e9;
+  border: none;
+  border-radius: 7px;
+  padding: 0 20px;
+}
+
+.postUser a{
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.postUser img{
+  height: 125px;
+  padding: 15px;
+}
+
+.postUser h2{
+  padding-top: 50px;
+  margin: 0 30px 0 20px;
+  font-size: 3rem;
   color: black;
 }
-.postTitle{
-  padding:10px;
+
+.postInfo h1{
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+  background-color: rgba(218, 218, 222, 0.797);
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
 }
 
-.postBody h1{
-  font-size:20px;
-  text-align: center;
+.postBody p{
+  font-size: 2rem;
+  text-align: left;
+  margin: 20px;
+  padding: 30px
 }
 
-.postTags h3{
-  font-size:15px;
-  text-align: center;
+.postTags p{
+  display: flex;
+  font-size: 2rem;
+  padding: 0 5px;
 }
 
 .leftContainer h2{
   text-align: center;
-}
-.leftContainer {
-  display:flex;
-  align-items: center;
-  flex-direction: column;
-}
-.postImage{
-  width: 45%;
-  overflow: hidden;
-}
-.postImage img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 600ms;
-}
-
-.postImage img:hover{
-  transform: scale(1.2);
 }
 
 .leftContainer header{
@@ -59,12 +115,12 @@
   justify-content: flex-start;
 }
 
+.postImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-.postUser{
-  margin-left: 50px;
-  box-sizing: border-box;
-  border: 1px solid #292934;
-  display: flex;
-}
+
+
 
 

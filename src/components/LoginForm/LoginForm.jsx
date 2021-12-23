@@ -35,7 +35,7 @@ const LoginForm = props => {
             <h1>Log In</h1>
             {msg
               ? <h3>{msg}</h3>
-              : <h3>Welcome</h3>
+              : <h3>Share more feels!</h3>
             }
 
           </div>
