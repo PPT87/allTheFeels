@@ -70,43 +70,39 @@ const EditPost = (props) => {
 
   return (
     <div className="layout">
-        <h1 className='edit-title'>Edit Post</h1>
       <form className="create-post-form" onSubmit={handleEditPost}>
+        <div className='form-header'>
+        <h1 className='edit-title'>Edit Post</h1>
+        </div>
 
-        <div className='horizontal-group'>
-          <div className='form-group left'>
-            <div className="title-prompt">
-              <label>Edit Title: </label>
-            </div>
-              <input className='title-input'
-              style={{height: "30px", width: "400px"}}
-                required
-                name="title"
-                autoComplete='off'
-                placeholder="Enter title here"
-                value={title}
-                onChange={handleChange}
+        <div className='form-body'>
+          <div className='horizontal-group'>
+            <div className='form-group left'>
+              <label className='label-title'>Edit Title: </label>
+                <input className='form-input'
+                  required
+                  name="title"
+                  autoComplete='off'
+                  placeholder="Enter title here"
+                  value={title}
+                  onChange={handleChange}
+                />
+              </div>
+                <div className='form-group right'>
+                <label className='label-title'>Add an Image: </label>
+              <input className='form-input'
+                type='file'
+                name="image"
+                onChange={(e) => setImage(e.target.files[0])}
               />
             </div>
-              <div className='form-group right'>
-            <div className="image-prompt">
-              <label>Add an Image: </label>
           </div>
-            <input
-              type='file'
-              name="image"
-              onChange={(e) => setImage(e.target.files[0])}
-            />
-          </div>
-        </div>
+        </div>        
 
       <div className='form-group description'>
-        <div className="body-prompt">
-          <label>Edit Description: </label>
-        </div>
-          <textarea className='body-input'
+          <label className='label-title'>Edit Description: </label>
+          <textarea className='form-input body'
             required
-            style={{height: "300px", width: "900px"}}
             name="body"
             autoComplete='off'
             placeholder="Enter description here"
@@ -116,10 +112,8 @@ const EditPost = (props) => {
       </div>
 
       <div className='form-group tags'>
-        <div className="tags-prompt">
-          <label>Edit Tags: </label>
-        </div>
-          <textarea className='tags-input'
+          <label className='label-title'>Edit Tags: </label>
+          <textarea className='form-input tags'
             style={{height: "100px", width: "300px"}}
             required
             name="tags"

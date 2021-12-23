@@ -15,7 +15,6 @@ const PostForm = (props) => {
               <label className='label-title'>Add Title: </label>            
               <input className="form-input"
                 required
-                style={{height: "30px", width: "400px"}}
                 name="title"
                 autoComplete='off'
                 placeholder="Enter title here"
