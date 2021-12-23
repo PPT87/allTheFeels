@@ -4,14 +4,16 @@ import '../../components/PostForm/CreatePost.css'
 
 const PostForm = (props) => {
   return (
-    <form className="create-form" onSubmit={props.handleSubmit}>
+    <form className="create-post-form" onSubmit={props.handleSubmit}>
+      <div className='form-header'>
       <h1 className='create-title'>Create A Post</h1>
+      </div>      
+
+      <div className='form-body'>
         <div className='horizontal-group'>
-          <div className='form-group left'>
-            <div className="title-prompt">
-              <label>Add Title: </label>
-            </div>
-              <input className='title-input'
+          <div className='form-group left'>            
+              <label className='label-title'>Add Title: </label>            
+              <input className="form-input"
                 required
                 style={{height: "30px", width: "400px"}}
                 name="title"
@@ -22,10 +24,8 @@ const PostForm = (props) => {
               />
           </div>
           <div className='form-group right'>
-            <div className="image-prompt">
-          <label>Add an Image: </label>
-        </div>
-          <input className='image-input'
+          <label className='label-title'>Add an Image: </label>
+          <input className="form-input"
             required
             type='file'
             name="image"
@@ -33,26 +33,21 @@ const PostForm = (props) => {
           />
           </div>
         </div>
-
-        <div className='form-group description'>
-          <div className="body-prompt">
-            <label>Add Description: </label>
-          </div>
-            <textarea className='body-input'
+        <div className='form-group description'>          
+            <label className='label-title'>Add Description: </label>
+            <textarea className="form-input"
               required
-              style={{height: "300px", width: "900px"}}
+              style={{height: "300px"}}
               name="body"
               autoComplete='off'
               placeholder="Enter description here"
               value={props.body}
               onChange={(e) => props.setBody(e.target.value)}
-          />
-        </div>
+            />            
+          </div>          
 
         <div className='form-group tags'>
-          <div className="tags-prompt">
-            <label>Add Tags: </label>
-          </div>
+            <label className='label-title'>Add Tags: </label>          
             <textarea className='tags-input' 
               style={{height: "100px", width: "300px"}}
               required
@@ -63,6 +58,7 @@ const PostForm = (props) => {
               onChange={(e) => props.setTags(e.target.value)}
             />
         </div>
+      </div>
           <div className='createBtn-wrapper'>
             <button type="submit" className='createBtn'>Create Post</button>
           </div>

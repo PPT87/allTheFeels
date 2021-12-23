@@ -71,7 +71,7 @@ const EditPost = (props) => {
   return (
     <div className="layout">
         <h1 className='edit-title'>Edit Post</h1>
-      <form className="create-form" onSubmit={handleEditPost}>
+      <form className="create-post-form" onSubmit={handleEditPost}>
 
         <div className='horizontal-group'>
           <div className='form-group left'>
