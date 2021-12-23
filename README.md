@@ -15,6 +15,8 @@ Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our
 <img src="../allTheFeels/src/assets/logo/screenshot3.png" alt="create post screenshot"/>
 <img src="../allTheFeels/src/assets/logo/screenshot4.png" alt="home page screenshot"/>
 
+![landing page](./src/assets/logo/screenshot2.png)
+
 <br>
 
 <h2>Technologies</h2>
