@@ -34,8 +34,9 @@ const Comments = (props) => {
           {...props} 
           handleCreateComment={handleCreateComment}
         />
-        {props.comments?.map((comment) => (
+        {props.comments?.map((comment, index) => (
           <CommentList
+            key={index}
             comment={comment}
             user={props.user}
             handleDeleteComment={handleDeleteComment}

@@ -15,16 +15,6 @@ const PostDetails = (props) => {
   const [post, setPost] = useState()
   const [comments, setComments] = useState([])
 
-
-  const handleDeletePost = async (postId) => {
-    try {
-      await postService.deletePost(postId)
-      navigate('/posts')
-    } catch (error) {
-      throw error
-    }
-  }
-
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -37,6 +27,15 @@ const PostDetails = (props) => {
     }
     fetchPost()
   }, [id])
+
+  const handleDeletePost = async (postId) => {
+    try {
+      await postService.deletePost(postId)
+      navigate('/posts')
+    } catch (error) {
+      throw error
+    }
+  }
 
   return (
     <div className="layout">
