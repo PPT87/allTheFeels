@@ -1,55 +1,51 @@
-## Background:
-Have you ever felt happy, sad, annoyed, excited, anxious, etc. Did you know creating art heals pain? 
-All the Feels is a website that creates a place where adolescents can share their drawings, sketches, doodles. Community is one of the most important emotional resources someone can have. Connect with your peers by adding comments and support to each other’s posts in an expressive online space where you can lift each other up”
+<h1>All The Feels</h1>
+The percentage of people who experience symptoms of depression is highest among adolescents and young adults. Self expression through art is proven to relieve stress and significantly decrease anxiety, depression, and suicidal thoughts.
+
+A supportive community is one of the most important emotional resources a person can have. All the Feels is a website that creates a place where adolescents can share their drawings, sketches, doodles, stories, and feelings. 
+
+The application is deployed <a href="https://allthefeelsapp.herokuapp.com/">here</a>.
 <br>
 
-
-## All the Feels Screenshots
-
-
-
+Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our ERD and wireframe.
 <br>
 
-##  [Try Me Out!](https://allthefeelsapp.herokuapp.com/)
-<br>
+<h2>Screenshots</h2>
 
-You can check out my Trello board [HERE!](https://trello.com/b/gQTYPmew/all-the-feels
-)
-<br>
-
-## Technologies Used
-- JavaScript
-- CSS
-- Express
-- NodeJs
-- Heroku
-- React
-- MongoDB
-- HTML
-- Bootstrap
-- Cloudinary
+<img src="../../projects/allTheFeels/src/assets/logo/screenshot2.png" alt=" login screenshot"/>
+<img src="../../projects/allTheFeels/src/assets/logo/screenshot3.png" alt="create post screenshot"/>
+<img src="../../projects/allTheFeels/src/assets/logo/screenshot4.png" alt="home page screenshot"/>
 
 <br>
 
-## Future Additions:
-- Add a search bar at the top of the page, and have it be able to search through tags and see posts that contain that tag.
-- Add a filter option to filter through tags.
-- Add a feature that allows me to favorite a post.
-- Add a "Are you sure you want to delete this" page when a delete button is clicked.
-- Make it mobile responsive.
+<h2>Technologies</h2>
+<ul>
+  <li>React</li>
+  <li>JavaScript</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Express</li>
+  <li>NodeJs</li>
+  <li>Heroku</li>
+  <li>MongoDB</li>
+  <li>Cloudinary</li>
+</ul>
 
 <br>
 
-## Credits
+<h2>Future Improvements</h2>
+<ul>
+  <li>Add a search function to allow us to find posts via the tags.</li>
+  <li>Add a feature to favorite a post.</li>
+  <li>Add a "Are you sure you want to delete this" page when a delete button is clicked.</li>
+  <li>AMake the site mobile responsive.</li>
+</ul>
 
-Logo icon: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<br>
 
-<div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
-
-Background Image: <a href="https://www.vecteezy.com/free-vector/paint-splatter">Paint Splatter Vectors by Vecteezy</a>
-
-Code for <a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">Hover over cards effect</a> from <a href="www.codepen.io">www.codepen.io</a>
-
-We wanted to also give a huge shoutout to https://github.com/slavdefense/Backlog-MERN-Stack for their help in helping us get the image upload feature working in our app.
-
+<h2>Credits</h2>
+<ul>
+  <li><b>Logo icon: </b><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>  and <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></li>
+  <li><b>Background Image: </b><a href="https://www.vecteezy.com/free-vector/paint-splatter">Paint Splatter Vectors by Vecteezy</a></li>
+  <li><b>Template for Home and Profile Page: </b><a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">sashatran on Codepen</a></li>
+  <li>We wanted to thank <a href="https://github.com/slavdefense/Backlog-MERN-Stack">slavdefense, mbedard0, and williambennett321</a> for their help in assissting us with image upload.</li>
+</ul>
