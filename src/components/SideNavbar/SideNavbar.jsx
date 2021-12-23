@@ -6,7 +6,6 @@ import { BsPerson, BsPersonPlus } from 'react-icons/bs'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { BiLogOut } from 'react-icons/bi'
 import { VscSignIn } from 'react-icons/vsc'
-import { AiOutlineCloseCircle } from 'react-icons/ai'
 import'../SideNavbar/SideNavbar.css'
 
 
@@ -33,7 +32,7 @@ return(
       :
         <nav className={showNav ? 'sidenav active' : 'sidenav'}>  
         <div className='close-block'>
-              <AiOutlineCloseCircle onClick={() => setShowNav(!showNav)} className='closeBtn'/>
+          <img src={xLogo} alt='x-icon' onClick={() => setShowNav(!showNav)} className='closeBtn'/> 
             </div>
             <div className='logo-block'>
               <img src={logo} alt="logo" className='logo'/>
