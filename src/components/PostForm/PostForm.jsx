@@ -33,11 +33,11 @@ const PostForm = (props) => {
           />
           </div>
         </div>
+        
         <div className='form-group description'>          
             <label className='label-title'>Add Description: </label>
-            <textarea className="form-input"
+            <textarea className="form-input body"
               required
-              style={{height: "300px"}}
               name="body"
               autoComplete='off'
               placeholder="Enter description here"
@@ -48,7 +48,7 @@ const PostForm = (props) => {
 
         <div className='form-group tags'>
             <label className='label-title'>Add Tags: </label>          
-            <textarea className='tags-input' 
+            <textarea className='form-input tags' 
               style={{height: "100px", width: "300px"}}
               required
               name="tags"
