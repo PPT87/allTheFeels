@@ -11,9 +11,9 @@ Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our
 
 <h2>Screenshots</h2>
 
-<img src="../../projects/allTheFeels/src/assets/logo/screenshot2.png" alt=" login screenshot"/>
-<img src="../../projects/allTheFeels/src/assets/logo/screenshot3.png" alt="create post screenshot"/>
-<img src="../../projects/allTheFeels/src/assets/logo/screenshot4.png" alt="home page screenshot"/>
+<img src="../allTheFeels/src/assets/logo/screenshot2.png" alt='landing page'/>
+<img src="../allTheFeels/src/assets/logo/screenshot3.png" alt="create post screenshot"/>
+<img src="../allTheFeels/src/assets/logo/screenshot4.png" alt="home page screenshot"/>
 
 <br>
 
