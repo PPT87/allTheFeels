@@ -15,7 +15,7 @@ const CommentList = (props) => {
             {props.comment.comment_text}
           </p>
           {isAuthor &&
-          <button onClick={() => props.handleDeleteComment(props.comment._id)}>Delete</button>
+          <button className='deleteBtn' onClick={() => props.handleDeleteComment(props.comment._id)}>Delete</button>
           }
         </div>
     </div>

@@ -61,8 +61,6 @@
   padding: 0 20px;
 }
 
-
-
 .postUser a{
   color: white;
   font-weight: 600;
@@ -123,7 +121,22 @@
   object-fit: cover;
 }
 
+.postUser .updateBtn{
+  margin: 35px;
+  padding: 0 20px;
+  background: #5095e9;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
 
+.postUser .updateBtn:hover{
+  background-color: white;
+  color: #5095e9;
+}
 
-
-
+.postUser .updateBtnLink:hover{
+  color: #5095e9;
+}

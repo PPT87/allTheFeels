@@ -37,7 +37,7 @@ const PostInfo = (props) => {
             {isAuthor &&
             <>
             <button className='deleteBtn' onClick={() => handleDeletePost(props.post._id)} >Delete Post</button>
-            <button className='updateBtn'><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
+            <button className='updateBtn'><Link className='updateBtnLink' to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
             </>
             } 
           </div>

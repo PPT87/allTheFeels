@@ -27,7 +27,7 @@ const CreateComment = (props) => {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className='updateBtn' type="submit">Submit</button>
       </form>
     </div>
   )
