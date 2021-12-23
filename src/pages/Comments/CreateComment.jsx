@@ -18,7 +18,7 @@ const CreateComment = (props) => {
   return (
     <div className="form-div">
       <form className="create-form" onSubmit={handleSubmit}>
-
+        <h2>Comments</h2>
         <textarea
           required
           autoComplete='off'

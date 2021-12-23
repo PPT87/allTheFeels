@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import "./CommentSection.css"
 
 const CommentList = (props) => {
@@ -12,7 +13,7 @@ const CommentList = (props) => {
       
         <div className="comment">
           <img src={props.comment.commenter.avatar} alt="user avatar" />
-          <h3>{props.comment.commenter.name}</h3>
+          <Link to={`/profile/${props.comment.commenter._id}`}><h3>{props.comment.commenter.name}</h3></Link>
           <p>
             {props.comment.comment_text}
           </p>

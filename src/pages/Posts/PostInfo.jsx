@@ -25,15 +25,17 @@ const PostInfo = (props) => {
             <Link to={`/profile/${props.post.added_by._id}`}><h2>{props.post.added_by.name}</h2></Link>
             {isAuthor &&
               <button><Link to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
-      } 
+            } 
           </div>
-      </div>
-      <div className="postBody">
-        <p>{props.post.body}</p>
-      </div>
-      <div className="postTags">
-        <p><b>Tags:</b> {allTags}</p>
-      </div>
+        </div>
+        <div className="postInfoDiv">
+          <div className="postBody">
+            <p>{props.post.body}</p>
+          </div>
+          <div className="postTags">
+            <p><b>Tags:</b> {allTags}</p>
+          </div>
+        </div>
     </div>
     
   )
