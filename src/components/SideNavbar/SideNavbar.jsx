@@ -22,7 +22,7 @@ return(
               <img src={logo} alt="logo" className='logo'/>
             </div>
 
-          <ul className='link-wrapper'>
+          <ul className='link-wrapper' onClick={() => setShowNav(!showNav)}>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
             <li><Link to={`/profile/${user.profile}`}><BsPerson /> Profile</Link></li>
             <li><Link to="/new"><AiOutlinePlusCircle /> Add Post</Link></li>
@@ -37,7 +37,7 @@ return(
             <div className='logo-block'>
               <img src={logo} alt="logo" className='logo'/>
             </div>
-          <ul className='link-wrapper'>
+          <ul className='link-wrapper' onClick={() => setShowNav(!showNav)}>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
             <li><Link to="/login"><VscSignIn /> Log In</Link></li>
             <li><Link to="/signup"><BsPersonPlus /> Sign Up</Link></li>
