@@ -7,18 +7,11 @@
 }
 
 .close-block{
-  background-color: red;
+  background-color: var(--background-color);
   position: absolute;
   width:55px;
   height: 40px;
   border-bottom-right-radius: 10px;
-}
-
-header h1{
-  color: blue;
-  font-weight: 900;
-  margin-top: 0;
-  margin-bottom: 40px;
 }
 
 header{
@@ -66,7 +59,7 @@ header .logo{
 
 .sidenav{
   width: 250px;
-  background-color: rgba(111, 128, 144, 0.9);
+  background-color: #a9b2fc8c;
   position: absolute;
   min-height: 100vh;
   padding: 0;
@@ -91,7 +84,7 @@ ul li{
 }
 
 ul li a{
-  color: aliceblue;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
@@ -107,7 +100,7 @@ ul li a svg{
 
 ul li a:hover,
 ul li a.active{
-  background-color: aliceblue;
-  color: rgba(111, 128, 144, 0.9);
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
