@@ -31,7 +31,7 @@
 }
 
 .landing-button-container a {
-  color: rgb(222, 222, 248);
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px;
   margin: 30px;
@@ -39,8 +39,8 @@
 
 .landing-button-container a:hover {
   border-radius: 7px;
-  color: rgb(2, 2, 50);
-  background-color: rgb(222, 222, 248);
+  color: var(--background-color);
+  background-color: var(--text-color);
 }
 
 @media only screen and (max-width: 850px) {

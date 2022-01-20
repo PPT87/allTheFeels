@@ -68,7 +68,7 @@
   transform: scale(0.1);
 }
 p {
-  color: black;
+  color: var(--text-color);
   text-align: center;
   font-size: 15px;
   letter-spacing: 1px;
