@@ -23,11 +23,13 @@ html, body, #root {
   font-size: 20px;
   min-height: 100vh;
   width: 100vw;
-  background-image: url('./assets/logo/background.jpg');
-  background-size: cover;
+  /* background-image: url('./assets/logo/background.jpg'); */
+  /* background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: rgb(2, 2, 50);
+  color: rgb(222, 222, 248);
 }
 
 code {
