@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router'
 
 // Components
 import PostForm from './PostForm'
+import '../../components/PostForm/CreatePost.css'
 
 //Services
 import { createPost } from '../../services/postService'

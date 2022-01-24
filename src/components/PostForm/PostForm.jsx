@@ -6,7 +6,7 @@ const PostForm = (props) => {
   return (
     <form className="create-post-form" onSubmit={props.handleSubmit}>
       <div className='form-header'>
-      <h1 className='create-title'>Create A Post</h1>
+        <h1 className='create-title'>Create Post</h1>
       </div>      
 
       <div className='form-body'>
@@ -23,13 +23,13 @@ const PostForm = (props) => {
               />
           </div>
           <div className='form-group right'>
-          <label className='label-title'>Add an Image: </label>
-          <input className="form-input"
-            required
-            type='file'
-            name="image"
-            onChange={(e) => props.setImage(e.target.files[0])}
-          />
+            <label className='label-title'>Add an Image: </label>
+            <input className="form-input"
+              required
+              type='file'
+              name="image"
+              onChange={(e) => props.setImage(e.target.files[0])}
+            />
           </div>
         </div>
         
