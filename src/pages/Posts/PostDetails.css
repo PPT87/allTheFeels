@@ -1,7 +1,7 @@
 .post-details{
   width: 100vw;
   height:100vh;
-  padding-top: 50px;
+  padding-top: 100px;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -18,7 +18,7 @@
 }
 
 .postTitle {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .postTags {
@@ -28,79 +28,57 @@
 .postUser {
   display: inherit;
   align-self: flex-start;
-  padding-left: 10px;
-  border: solid 1px black;
-  box-shadow: 5px 5px 5px rgb(80, 79, 79);
-  border-radius: 10px;
-  background-color: rgba(218, 218, 222, 0.797);
-  margin: 30px 0 0 0;
+  margin-left: 165px;
 }
 
 .postImage {
   width: 45%;
   overflow: hidden;
-  box-shadow: 5px 5px 5px rgb(80, 79, 79);
-  border-radius: 10px;
 }
 
 .postInfoDiv {
-  background-color: rgba(218, 218, 222, 0.797);
-  border-radius: 10px;
-  margin: 40px 80px 40px 5%;
-  border: solid 1px black;
-  box-shadow: 5px 5px 5px rgb(80, 79, 79);
-  width: 85%;
-
-}
-
-.postUser button {
-  margin: 35px;
-  background: #5095e9;
-  border: none;
-  border-radius: 7px;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  margin-left: 150px;
 }
 
 .postUser a{
-  color: white;
+  color: var(--text-color);
+  margin: 0 10px;
   font-weight: 600;
   text-decoration: none;
 }
 
-.postUser img{
-  height: 125px;
-  padding: 15px;
+.postUser a:hover {
+  text-decoration: underline;
 }
 
 .postUser h2{
-  padding-top: 50px;
-  margin: 0 30px 0 20px;
-  font-size: 3rem;
-  color: black;
+  font-size: 2.3rem;
 }
 
 .postInfo h1{
   font-size: 4rem;
   text-align: center;
-  color: black;
-  text-decoration: underline;
-  background-color: rgba(218, 218, 222, 0.797);
-  border: solid 1px black;
-  box-shadow: 5px 5px 5px rgb(80, 79, 79);
-  border-radius: 10px;
-  padding: 30px;
   margin-top: 30px;
 }
 
 .postBody p{
+  align-content: center;
+  width: 80%;
   font-size: 2rem;
   text-align: left;
   margin: 20px;
-  padding: 30px
+  padding-left: 30px
 }
 
-.postTags p{
-  display: flex;
+.postTags {
+  align-self: flex-start;
+  display: inherit;
+}
+
+.postTags p {
   font-size: 2rem;
   padding: 0 5px;
 }
@@ -121,22 +99,22 @@
   object-fit: cover;
 }
 
-.postUser .updateBtn{
-  margin: 35px;
-  padding: 0 20px;
-  background: #5095e9;
-  border: none;
-  color: white;
-  font-weight: 600;
-  border-radius: 7px;
-  transition: all 0.3s;
+.updateLink img{
+  margin-top: 17px;
+  margin-left: 1050px;
+  width: 20px;
 }
 
-.postUser .updateBtn:hover{
-  background-color: white;
-  color: #5095e9;
+.deleteBtn {
+  padding: 5px;
+  margin: 5px;
 }
 
-.postUser .updateBtnLink:hover{
-  color: #5095e9;
+.deleteBtn img{
+  width: 15px;
+  height: 15px;
+  margin-top: 10px;
+  color: var(--text-color);
+  cursor: pointer;
 }
+

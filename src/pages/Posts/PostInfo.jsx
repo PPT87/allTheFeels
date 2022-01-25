@@ -1,6 +1,8 @@
 import React from 'react' 
 import { Link, useNavigate} from 'react-router-dom'
-import './PostInfo.css'
+import './PostDetails.css'
+import xLogo from '../../assets/icons/x-icon.png'
+import editLogo from '../../assets/icons/edit.png'
 
 import * as postService from '../../services/postService'
 
@@ -32,16 +34,19 @@ const PostInfo = (props) => {
           </div>
           <div className="postUser">
             <h2>By:</h2>
-            <img src={props.post.added_by.avatar} alt="user avatar"/>
             <Link to={`/profile/${props.post.added_by._id}`}><h2>{props.post.added_by.name}</h2></Link>
             {isAuthor &&
             <>
-            <button className='deleteBtn' onClick={() => handleDeletePost(props.post._id)} >Delete Post</button>
-            <button className='updateBtn'><Link className='updateBtnLink' to={`/posts/${props.post._id}/edit`} state={props.post} >Edit Post</Link></button>
+            <Link className='updateLink' to={`/posts/${props.post._id}/edit`} state={props.post} > <img src={editLogo} alt="edit post icon" /> </Link>
+
+            <div className='deleteBtn'>
+              <img src={xLogo} alt='delete post icon' onClick={() => handleDeletePost(props.post._id)} />
+            </div>
+
             </>
             } 
-          </div>
         </div>
+      </div>
         <div className="postInfoDiv">
           <div className="postBody">
             <p>{props.post.body}</p>

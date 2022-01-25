@@ -33,8 +33,10 @@
 .landing-button-container a {
   color: var(--text-color);
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
   margin: 30px;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .landing-button-container a:hover {

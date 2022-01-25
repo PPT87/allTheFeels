@@ -31,6 +31,9 @@
   font-weight: 600;
   border-radius: 7px;
   width: 200px;
+  font-size: 2rem;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 
 .createBtn:hover, .updateBtn:hover{

@@ -41,7 +41,7 @@
   width: 100%;
 }
 
-.form-container input, select, button {
+.form-container input select button {
   padding: 16px;
   font-size: 20px;
   margin-bottom: 16px;

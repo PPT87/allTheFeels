@@ -17,8 +17,8 @@ const CreateComment = (props) => {
 
   return (
     <div className="form-div">
+      <h2>Comments</h2>
       <form className="create-form" onSubmit={handleSubmit}>
-        <h2>Comments</h2>
         <textarea
           required
           autoComplete='off'
@@ -27,7 +27,7 @@ const CreateComment = (props) => {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button className='updateBtn' type="submit">Submit</button>
+        <button className='submitBtn' type="submit">Submit</button>
       </form>
     </div>
   )
