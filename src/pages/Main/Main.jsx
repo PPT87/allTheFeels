@@ -24,7 +24,6 @@ const Main = () => {
 
   return (
     <div className="all-posts">
-      <h1 className="title">Home</h1>
       <div className="wrapper">
         {posts.map((post, index) => (
         <Link to={`/posts/${post._id}`} key={index}>

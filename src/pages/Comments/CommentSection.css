@@ -10,6 +10,12 @@
   margin-bottom: 50px;
   margin-left: 20px;
 }
+
+.comment-list {
+  overflow: scroll;
+  height: 500px;
+}
+
 .create-form {
   margin-bottom: 60px;
   display: flex;
