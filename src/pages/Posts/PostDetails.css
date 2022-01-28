@@ -67,10 +67,11 @@
 .postBody p{
   align-content: center;
   width: 80%;
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: left;
   margin: 20px;
-  padding-left: 30px
+  padding-left: 30px;
+  line-height: 1.5;
 }
 
 .postTags {
@@ -79,7 +80,7 @@
 }
 
 .postTags p {
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding: 0 5px;
 }
 
@@ -115,5 +116,49 @@
   margin-top: 10px;
   color: var(--text-color);
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .postBody p {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .postBody p {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .postInfo h1{
+    font-size: 3rem;
+  }
+
+  .postUser {
+    margin-left: 75px;
+  }
+  .postImage, .postTitle{
+    margin-right: 75px;
+  }
+
+  .postInfo {
+    justify-content: left;
+  }
+
+  .postInfoDiv {
+    margin: 10px;
+  }
+
+  .postBody p{
+    padding: 0;
+    width: 72%;
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  .postImage {
+    width: 70%;
+  }
 }
 

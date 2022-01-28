@@ -4,7 +4,7 @@ import '../../components/SignupForm/SignupFormStyle.css'
 import * as authService from '../../services/authService'
 
 import Avatars from '../../pages/Avatars/Avatars'
-import cat from '../../assets/avatars/cat.png'
+import happy from '../../assets/avatars/happy.png'
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -14,7 +14,7 @@ const SignupForm = props => {
     name: '',
     email: '',
     password: '',
-    avatar: cat
+    avatar: happy
   })
 
   const handlePopup = () => {

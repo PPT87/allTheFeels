@@ -79,10 +79,20 @@ p {
 }
 
 @media (max-width: 600px) {
+
   .wrapper {
     display: block;
+    margin: 0;
+    margin-right: 45px;
 }
   .wrapper > * {
     margin: 10px;
+}
+
+  .media img {
+  width: 90%;
+}
+  .title {
+  margin-right: 40px;
 }
 }

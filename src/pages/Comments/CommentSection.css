@@ -13,7 +13,7 @@
 
 .comment-list {
   overflow: scroll;
-  height: 500px;
+  height: 400px;
 }
 
 .create-form {
@@ -28,13 +28,17 @@
   justify-content: center;
   align-content: center;
   height: 275px;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px var(--text-color);
 }
 
 .comment {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.no-comment {
+  text-align: center;
 }
 
 .comment-section h2{
@@ -53,6 +57,7 @@
   width: 400px;
   height: 100px;
   padding: 5px 0 0 10px;
+  font-size: 1.8rem;
 }
 
 .submitBtn {
@@ -102,4 +107,38 @@
 
 .comment a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .comment-section {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .comment-section {
+    max-width: 250px;
+  }
+
+  .no-comment {
+    font-size: 2rem;
+    margin-left: 50px;
+  }
+
+  .form-div h2 {
+    margin-left: 60px;
+  }
+
+  .form-div textarea{
+    width: 270px;
+    margin-right: 20px;
+  }
+
+  .submitBtn {
+    margin-left: 160px;
+  }
+
+  .create-form {
+    flex-direction: column;
+  }
 }

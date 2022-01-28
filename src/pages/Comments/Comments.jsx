@@ -36,7 +36,7 @@ const Comments = (props) => {
         />
         <div className="comment-list">
           {props.comments.length === 0
-            ? <h3>There are no comments yet.</h3>
+            ? <h3 className="no-comment">There are no comments yet.</h3>
             : props.comments.map((comment, index) => (
               <CommentList
                 key={index}

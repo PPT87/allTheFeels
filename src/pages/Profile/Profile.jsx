@@ -43,7 +43,7 @@ const Profile = () => {
 
   return (
     <div className="all-posts">
-      <h1 className="title">{profile?.name}'s Profile</h1>
+      <h1 className="title">{profile?.name}</h1>
       <div className="wrapper">
       {sortedPosts.map((post, index) => (
       <Link to={`/posts/${post._id}`} key={index}>

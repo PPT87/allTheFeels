@@ -49,3 +49,6 @@ Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our
   <li><b>Template for Home and Profile Page: </b><a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">sashatran on Codepen</a></li>
   <li>We wanted to thank <a href="https://github.com/slavdefense/Backlog-MERN-Stack">slavdefense, mbedard0, and williambennett321</a> for their help in assissting us with image upload.</li>
 </ul>
+
+
+  
