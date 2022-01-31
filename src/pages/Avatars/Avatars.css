@@ -86,3 +86,19 @@
   margin-top: auto;
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 850px) {
+
+  .popup-menu {
+    min-width: 105px;
+    margin-right: 90px;
+  }
+
+  .popup-header h3{
+    font-size: 20px;
+  }
+
+  .popup-menu button, .popup-menu select {
+    width: 250px;
+  }
+}
