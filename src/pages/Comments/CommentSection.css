@@ -117,28 +117,51 @@
 
 @media (max-width: 600px) {
   .comment-section {
-    max-width: 250px;
+    width: 100vw;
+    justify-content: left;
+  }
+
+  .comment {
+    width: 75vw;
   }
 
   .no-comment {
     font-size: 2rem;
-    margin-left: 50px;
-  }
-
-  .form-div h2 {
-    margin-left: 60px;
   }
 
   .form-div textarea{
     width: 270px;
     margin-right: 20px;
+    margin-left: 0;
   }
 
   .submitBtn {
-    margin-left: 160px;
+    margin-left: 85px;
   }
 
   .create-form {
     flex-direction: column;
+  }
+
+  .comment-card {
+    width: 200px;
+  }
+
+  .comment h3 {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .comment .deleteBtn {
+    margin: 20px;
+  }
+
+  .comment p {
+    font-size: 15px;
+    margin: auto;
   }
 }
