@@ -45,14 +45,21 @@
 }
 
 @media only screen and (max-width: 850px) {
-  .landing-elements{
-    height: 75%;
+
+  .landing-elements {
+    padding: 0;
+    margin-right: 50px;
+    margin-top: 100px;
   }
 
   .logo-splash {
     display: flex;
-    width: 90vw;
-    max-width: 350px;
+    width: 75vw;
+    min-width: 200px;
+  }
+
+  .landing-button-container a {
+    margin: 20px;
   }
 
 }
