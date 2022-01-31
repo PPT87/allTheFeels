@@ -13,7 +13,7 @@ const PostForm = (props) => {
         <div className='horizontal-group'>
           <div className='form-group left'>            
               <label className='label-title'>Add Title: </label>            
-              <input className="form-input"
+              <input className="form-input title"
                 required
                 name="title"
                 autoComplete='off'
@@ -24,7 +24,7 @@ const PostForm = (props) => {
           </div>
           <div className='form-group right'>
             <label className='label-title'>Add an Image: </label>
-            <input className="form-input"
+            <input className="form-input image"
               required
               type='file'
               name="image"
@@ -48,7 +48,6 @@ const PostForm = (props) => {
         <div className='form-group tags'>
             <label className='label-title'>Add Tags: </label>          
             <textarea className='form-input tags' 
-              style={{height: "100px", width: "300px"}}
               required
               name="tags"
               autoComplete='off'
