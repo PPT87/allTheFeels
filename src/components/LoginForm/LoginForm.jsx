@@ -30,7 +30,7 @@ const LoginForm = props => {
   return (
     <div className="signup-page">
 
-        <div className='form-container'>
+        <div className='form-container' id='login'>
           <div className="title-container">
             <h1>Log In</h1>
             {msg

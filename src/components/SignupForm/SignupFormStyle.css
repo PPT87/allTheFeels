@@ -95,3 +95,26 @@
 .redirect-link:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 850px) {
+  .signup-page{
+    justify-content: flex-start;
+    margin-left: 40px;
+  }
+
+  .title-container h3 {
+    font-size: 20px;
+  }
+
+  .redirect-container p {
+    font-size: 14px;
+  }
+  
+  .redirect-link{
+    font-size: 14px;
+  }
+
+  #login {
+    margin-top: -50px;
+  }
+}
