@@ -67,7 +67,7 @@ const EditPost = (props) => {
           <div className='horizontal-group'>
             <div className='form-group left'>
               <label className='label-title'>Edit Title: </label>
-                <input className='form-input'
+                <input className='form-input title'
                   required
                   name="title"
                   autoComplete='off'
@@ -78,7 +78,7 @@ const EditPost = (props) => {
               </div>
                 <div className='form-group right'>
                 <label className='label-title'>Add an Image: </label>
-              <input className='form-input'
+              <input className='form-input image'
                 type='file'
                 name="image"
                 onChange={(e) => setImage(e.target.files[0])}
@@ -99,7 +99,6 @@ const EditPost = (props) => {
       <div className='form-group tags'>
           <label className='label-title'>Edit Tags: </label>
           <textarea className='form-input tags'
-            style={{height: "100px", width: "300px"}}
             required
             name="tags"
             autoComplete='off'
