@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .title-container{
@@ -76,7 +75,6 @@
 .redirect-container{
   display: flex;
 	align-items: center;
-  font-size: 14px;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -89,7 +87,8 @@
   color: var(--text-color);
   text-decoration: none;
   padding-left: 6px;
-  font-size: 15px;
+  margin-bottom: 12px;
+  font-size: 2.3rem;
 }
 
 .redirect-link:hover {
