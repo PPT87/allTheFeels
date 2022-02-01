@@ -58,6 +58,7 @@
   height: 100px;
   padding: 5px 0 0 10px;
   font-size: 1.8rem;
+  font-family: inherit;
 }
 
 .submitBtn {

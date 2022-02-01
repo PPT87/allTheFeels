@@ -51,7 +51,7 @@ const PostForm = (props) => {
               required
               name="tags"
               autoComplete='off'
-              placeholder="Ex: apple, pear, tiger"
+              placeholder="Separate tags with commas"
               value={props.tags}
               onChange={(e) => props.setTags(e.target.value)}
             />
