@@ -22,10 +22,10 @@ const EditPost = (props) => {
       if (image) {
         const data = new FormData()
         data.append('file', image)
-        data.append("upload_preset", "rkjmljnm")
+        data.append("upload_preset", "pfe9flzp")
         data.append('folder', 'allthefeels')
-        data.append("cloud_name","allthefeels")
-        const res = await (await fetch("https://api.cloudinary.com/v1_1/allthefeels/image/upload", {
+        data.append("cloud_name","adinoto")
+        const res = await (await fetch("https://api.cloudinary.com/v1_1/adinoto/image/upload", {
           method: "post",
           body: data
         })).json()
