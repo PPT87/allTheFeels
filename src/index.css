@@ -31,6 +31,10 @@ html, body, #root {
   color: var(--text-color);
 }
 
+button {
+  font-family: inherit;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
