@@ -14,9 +14,11 @@ Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our
 
 <h2>Screenshots</h2>
 
-![landing page](./src/assets/logo/screenshot2.png)
+![landing page](./src/assets/logo/screenshot1.png)
+![home page](./src/assets/logo/screenshot2.png)
 ![create post page](./src/assets/logo/screenshot3.png)
-![home page](./src/assets/logo/screenshot4.png)
+![post display page](./src/assets/logo/screenshot4.png)
+![comments on post display page](./src/assets/logo/screenshot5.png)
 
 <br>
 
