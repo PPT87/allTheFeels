@@ -6,10 +6,10 @@ A supportive community is one of the most important emotional resources a person
 The updated application is deployed <a href="https://allthefeelsapp.herokuapp.com/">here</a>.
 <br>
 
-There have improvements and edits made to this application. The original group project before these modifications can be found <a href="https://allthefeelsapp.herokuapp.com/">here</a>.
+There have been improvements and edits made to this application. The original group project before these modifications can be found <a href="https://allthefeelsapp.herokuapp.com/">here</a>.
 <br>
 
-Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our ERD and wireframe.
+Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view the ERD and wireframe.
 <br>
 
 <h2>Screenshots</h2>
@@ -39,9 +39,9 @@ Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our
 
 <h2>Future Improvements</h2>
 <ul>
-  <li>Add a search function to allow us to find posts via the tags.</li>
+  <li>Add a search function to allow users to find posts via the tags.</li>
   <li>Add a feature to favorite a post.</li>
-  <li>Add a "Are you sure you want to delete this" page when a delete button is clicked.</li>
+  <li>Add an "Are you sure you want to delete this" message when a delete button is clicked.</li>
 </ul>
 
 <br>
@@ -57,7 +57,7 @@ Click <a href="https://trello.com/b/gQTYPmew/all-the-feels">here</a> to view our
   <li><a href="https://www.flaticon.com/free-icons/emotional" title="emotional icons">Emotional icons created by Flat Icons - Flaticon</a></li>
     </ul>
   <li><b>Template for Home and Profile Page: </b><a href="https://www.codepen.io/sashatran/pen/aJvaEG?editors=1100">sashatran on Codepen</a></li>
-  <li>We wanted to thank <a href="https://github.com/slavdefense/Backlog-MERN-Stack">slavdefense, mbedard0, and williambennett321</a> for their help in assissting us with image upload.</li>
+  <li>We wanted to thank <a href="https://github.com/slavdefense/Backlog-MERN-Stack">slavdefense, mbedard0, and williambennett321</a> for their help in assissting with image upload.</li>
 </ul>
 
 
