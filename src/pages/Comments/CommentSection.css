@@ -33,7 +33,7 @@
 
 .comment {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -112,7 +112,20 @@
 
 @media (max-width: 800px) {
   .comment-section {
-    max-width: 400px;
+    max-width: 300px;
+    justify-content: left;
+  }
+
+  .comment-card {
+    width: 300px;
+  }
+
+  .create-form {
+    flex-direction: column;
+  }
+
+  .submitBtn{
+    margin-left: 200px;
   }
 }
 
@@ -138,10 +151,6 @@
 
   .submitBtn {
     margin-left: 85px;
-  }
-
-  .create-form {
-    flex-direction: column;
   }
 
   .comment-card {
